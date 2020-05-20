@@ -23,7 +23,6 @@ de arquivos **Markdown**. Ao criar o **README.md** em seu repositório, ao rolar
 inicial, todo o conteúdo formatado em Markdown irá aparecer, contendo todas as informações necessárias para o projeto.
 Para ver o conteúdo sem formatação, procure um ícone de um lápis, pu até clique no arquivo em si **_README.md_**, 
 assim você será encaminhado para a edição do arquivo.
-_______________________________________________
 
 ## A sintaxe
 
@@ -173,3 +172,124 @@ Resultado:
 > *Everything* is going **well**.
 _______________________________________________
 
+### Listas
+
+Você pode organizar listas, podendo ser ordenadas ou não.
+
+**_Listas Ordenadas_**
+
+Usando (número)(ponto) você pode ordenar as listas numericamente, como por exemplo:
+
+```
+1. Primeiro
+2. Segundo
+3. Terceiro
+4. Quarto
+
+1. Primeiro
+1. Segundo
+1. Terceiro
+1. Quarto
+
+1. Primeiro
+8. Segundo
+5. Terceiro
+3. Quarto
+```
+
+Todos eles vão gerar o seguinte resultado:
+
+1. Primeiro
+2. Segundo
+3. Terceiro
+4. Quarto
+
+Itens da lista de aninhamento
+
+Para aninhar itens de linha em uma lista ordenada, recue os itens quatro espaços ou uma guia.
+
+```
+1. Primeiro item
+2. Segundo item
+3. Terceiro item
+    1. Indentado item
+    2. Indentado item
+4. Quarto item
+```
+Irá gerar:
+
+1. Primeiro item
+2. Segundo item
+3. Terceiro item
+    1. Indentado item
+    2. Indentado item
+4. Quarto item
+
+**_Listas não Ordenadas_**
+
+Para criar uma lista não ordenada, adicione traços (-), asteriscos (*) ou sinais de adição (+) na frente de
+itens de linha.
+
+```
+- Exemplo 1
+- Exemplo 1
+
+* Exemplo 2
+* Exemplo 2
+
++ Exemplo 3
++ Exemplo 3
+```
+
+Vai gerar:
+
+- Exemplo 1
+- Exemplo 1
+
+* Exemplo 2
+* Exemplo 2
+
++ Exemplo 3
++ Exemplo 3
+
+_______________________________________________
+
+### Trechos de códigos
+
+Para colocar algum código sem que ele esteja formatado, então poderá colocar algum código em *Markdown* dentro
+dos trechos de códigos e ele não será formatado, será mostrado exatamento como escreveu, é desse jeito que eu
+consigo mostrar para vocês os códigos como são originalmente antes de serem formatados em *.md*.
+
+Temos o trecho simples, sendo de apenas uma linha, usando uma crase para abrir e outra para fechar:
+```
+`este é um exemplo`
+```
+Resultado:
+
+`este é um exemplo`
+
+E também temos a mais completa, que podemos colocar quantas linhas de códigos nós quisermos.
+Use três crases para abrir e três para fechar, desse jeito:
+
+```
+    ```
+    Este é nosso
+    Querido Exemplo
+    
+    **Teste**
+    
+    Nota que não irá formatar o negrito!
+    ```
+```
+
+Vai gerar:
+```
+Este é nosso
+Querido Exemplo
+**Teste**
+Nota que não irá formatar o negrito!
+```
+
+**_Nota:_** Para interligar um código dentro do outro, assim como eu fiz de exemplo para vocês: Abra o primeiro trecho de código com as três crases, e feche de imediato. Dentro desse código use a indentação de 4 espaços, e assim poderá abrir outro código sem formatar.
+
+_______________________________________________
