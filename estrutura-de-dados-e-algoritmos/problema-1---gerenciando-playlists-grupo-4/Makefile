@@ -10,5 +10,5 @@ main: main.o musica.o playlist.o openCsv.o playlistOrdenacao.o
 	rm *.o
 
 exe:
-	./main
+	./main Gustavo 20
 	rm main

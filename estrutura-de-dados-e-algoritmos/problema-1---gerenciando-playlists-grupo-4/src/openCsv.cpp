@@ -32,11 +32,15 @@ void writeFile(playlist *playlistParaSalvar, string nomeDaPlanilha) {
   fout << "Artista,Album,Genero,Ano,Nome,Duracao,Classificação,Reproducoes,"
           "DataAdicao,UltimaReproducao\n";
   while (musicaAtual != NULL) {
+    string aspas = "\"";
     artista = musicaAtual->getArtista();
+    artista = aspas + artista + aspas;
     album = musicaAtual->getAlbum();
+    album = aspas + album + aspas;
     Genero = musicaAtual->getGenero();
     Ano = musicaAtual->getAno();
     Nome = musicaAtual->getNome();
+    Nome = aspas + Nome + aspas;
     Duracao = musicaAtual->getDuracao();
     Classificacao = musicaAtual->getClassificacao();
     Reproducoes = musicaAtual->getReproducoes();
