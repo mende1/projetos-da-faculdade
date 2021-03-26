@@ -132,7 +132,7 @@ NOTES:
  *   Rating: 1
  */
 int bitXor(int x, int y) {
-  return 2;
+  return ~( ~(x & (~ y)) & ~( ~ x & y));
 }
 
 /* 
@@ -144,7 +144,17 @@ int bitXor(int x, int y) {
  *   Rating: 2
  */
 int allEvenBits(int x) {
-  return 2;
+   int y = 0x55;
+   int r;
+   int pivot = y << 24;
+
+   pivot += y << 16;
+   pivot += y << 8;
+   pivot += y;
+
+   r = x & pivot;
+
+   return !(r^pivot);
 }
 
 /* 
@@ -156,7 +166,7 @@ int allEvenBits(int x) {
  *   Rating: 3 
  */
 int logicalShift(int x, int n) {
-    return 2;
+    
 }
 
 /* 
