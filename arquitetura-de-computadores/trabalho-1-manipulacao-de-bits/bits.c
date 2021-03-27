@@ -188,7 +188,15 @@ int logicalNeg(int x) {
  *   Rating: 1
  */
 int tmax(void) {
-  return 2;
+  int a = 0xFF;
+  int b = 0xEF;
+
+  b = b << 24;
+  b += a << 16;
+  b += a << 8;
+  b += a;
+
+  return b;
 }
 
 /* 
@@ -201,7 +209,7 @@ int tmax(void) {
  *   Rating: 2
  */
 int twosBits(int x, int n) {
-  return 2;
+   return (~x + 1);
 }
 
 
