@@ -2,7 +2,9 @@
 ---
 ### Gustavo Mendel
 Graduando em Barachelado de **Ciências da Computação**.
+
 Desde 2019, até os dias atuais.
+
 Pela Universidade Federal da Bahia (UFBA).
 
 ---
@@ -54,6 +56,7 @@ Aprofundamento em Lógica de Programação e nos recursos das linguagens de prog
 E também o básico de estruturas de dados, e como implementá-las.**
 
 Um aprofundamento bem maior nos estudos e trabalhos mais complexos, usando bibliotecas gráficas para auxiliar no entendimento, assim como estruturas bem definidas para praticidade com vetores, como o vector. Usamos C++.
+
 Uma matéria incrível, ministrada pelo incrível professor Antônio Apolinário, que mesmo com as dificuldades do ensino remoto perante à pandemia do COVID-19, conseguiu entregar um ensino realmente muito bom.
 
 [Os códigos](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos)
@@ -62,7 +65,9 @@ Uma matéria incrível, ministrada pelo incrível professor Antônio Apolinário
 
 #### Os principais trabalhos:
 [Problema 0](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-0-ordenacao-gustavo-mendel)
+
 [Problema 1](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-1---gerenciando-playlists-grupo-4)
+
 [Problema 2](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-2-grupo4)
 
 Note que cada problema tem a descrição do professor do que deveria ser feito, e no diretório `src/` de cada problema tem a descrição detalhada da realização do problema.
