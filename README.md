@@ -1,11 +1,16 @@
+<img src="online-learning.svg" width="300" align="right">
+
 # Meus projetos da Faculdade
+
 ---
 ### Gustavo Mendel
+
 Graduando em Barachelado de **Ciências da Computação**.
 
 Desde 2019, até os dias atuais.
 
 Pela Universidade Federal da Bahia (UFBA).
+
 
 ---
 
@@ -34,6 +39,7 @@ Tenho apenas os programas que escrevi, não lembrei de salvar os enunciados dos 
 ---
 ### Laboratório de Programação I
 [ 2020.3 ] - Semestre Letivo Suplementar (SLS)
+
 *Estudo Remoto, ante à pandemia do COVID-19*
 
 Aprofundamento em Lógica de Programação e nos recursos das linguagens de programação, usando C e C++.
@@ -50,7 +56,9 @@ Aprofundamento em Lógica de Programação e nos recursos das linguagens de prog
 
 ---
 ### Estrutura de Dados e Algoritmos I
-[ 2020.3 ] - Semestre Letivo Suplementar
+[ 2020.3 ] - Semestre Letivo Suplementar (SLS)
+
+*Estudo Remoto, ante à pandemia do COVID-19*
 
 **Aqui inicio o estudo de algorigmos, como compreender, aplicar seus conceitos básicos e analisá-los.
 E também o básico de estruturas de dados, e como implementá-las.**
