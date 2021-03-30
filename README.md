@@ -2,7 +2,6 @@
 
 # Meus projetos da Faculdade
 
----
 ### Gustavo Mendel
 
 Graduando em Barachelado de **Ciências da Computação**.
