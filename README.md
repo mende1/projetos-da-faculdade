@@ -4,11 +4,15 @@
 
 ### Gustavo Mendel
 
-Graduando em Barachelado de **Ciências da Computação**.
+Bacharelado em **Ciência da Computação**. 
+
+Em curso :mortar_board:
 
 Desde 2019, até os dias atuais.
 
 Pela Universidade Federal da Bahia (UFBA).
+
+[Disciplinas Cursadas](https://github.com/gustavo-mendel/projetos-da-faculdade/blob/master/DISCIPLINAS.md)
 
 
 ---
