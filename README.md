@@ -1,4 +1,4 @@
-<img src="online-learning.svg" width="300" align="right">
+<img src="computer_science.svg" width="300" align="right">
 
 # Meus projetos da Faculdade
 
