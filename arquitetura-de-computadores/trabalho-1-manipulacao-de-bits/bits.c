@@ -1,7 +1,9 @@
 /*
  * CS:APP Data Lab
  *
- * <Please put your name and userid here>
+ * Name: Gustavo Mendel Queiroz e Souza
+ * Userid: gustavo.mendel.br@gmail.com
+ * Registration Number UFBA: 219215671
  *
  * bits.c - Source file with your solutions to the Lab.
  *          This is the file you will hand in to your instructor.
@@ -211,15 +213,14 @@ int tmax(void) {
  *   Rating: 2
  */
 int twosBits(int x, int n) {
-   int z = (~x + 1);
-   int ans1, ans2;
+   int ans, is32 = 0x20;
+   int mask = (x << (32 + (~n + 1))) >> 31;
 
-   n = (n + (~1 + 1));
+   is32 = is32 & n;
+   is32 = is32 >> 5;
 
-   ans1 = logicalShift(x, n);
-   ans2 = logicalShift(z, n);
+   ans = x >> n;
+   ans = !(ans ^ mask);
 
-   return ans1 ^ ans2;
+   return ans | is32;
 }
-
-

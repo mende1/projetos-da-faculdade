@@ -20,20 +20,21 @@ typedef vector<string>   vs;
 
 void solve() {
 
-	int n, a;
-    cin >> n;
+	cini(n);
+
+	map<int, int> pref;
  
-    map<int, int> c;
- 
-	for (int i = 0; i < n; ++i) {
-		cin >> a;
-		c[a]++;
+	fori(0, n) {
+		cini(a);
+		pref[a]++;
 	}
-	int sol = 0;
-	for (auto p : c) {
-		sol = max(sol, p.second);
-		cout << sol << endl;
+
+	int res = 0;
+	for (auto p : pref) {
+		res = max(res, p.second);
 	}
+
+	cout << res << endl;
 }
 
 int main(){
