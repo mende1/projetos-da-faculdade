@@ -166,7 +166,16 @@ int allEvenBits(int x) {
  *   Rating: 3 
  */
 int logicalShift(int x, int n) {
-    
+   int pivot = 0x80;
+   int ans = x;
+
+   pivot = pivot << 24;
+   pivot = (pivot >> n ) << 1;
+
+   ans = ans >> n;
+   ans = ans & (~pivot);
+
+   return ans;
 }
 
 /* 
@@ -188,15 +197,8 @@ int logicalNeg(int x) {
  *   Rating: 1
  */
 int tmax(void) {
-  int a = 0xFF;
-  int b = 0xEF;
-
-  b = b << 24;
-  b += a << 16;
-  b += a << 8;
-  b += a;
-
-  return b;
+   int ans = ~(1 << 31);
+   return ans;
 }
 
 /* 
@@ -209,7 +211,15 @@ int tmax(void) {
  *   Rating: 2
  */
 int twosBits(int x, int n) {
-   return (~x + 1);
+   int z = (~x + 1);
+   int ans1, ans2;
+
+   n = (n + (~1 + 1));
+
+   ans1 = logicalShift(x, n);
+   ans2 = logicalShift(z, n);
+
+   return ans1 ^ ans2;
 }
 
 
