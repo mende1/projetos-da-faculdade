@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="exercicio-extra-poo" />
         <module name="atvd-extra-poo" />
       </profile>
     </annotationProcessing>

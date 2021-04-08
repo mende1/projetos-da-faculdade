@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Curso {
 
-    private int codigo;
+    private final int codigo;
     private String nome;
     private ArrayList<Disciplina> disciplinas;
 
@@ -12,20 +12,20 @@ public class Curso {
      * 
      * Construtor
      * 
-     * @param nome
-     * @param codigo
+     * @param nome String
+     * @param codigo int
      */
     public Curso (String nome, int codigo) {
         this.nome = nome;
         this.codigo = codigo;
-        disciplinas = new ArrayList<Disciplina>();
+        disciplinas = new ArrayList<>();
     }
 
     /**
      * 
      * Adiciona uma Disciplina para o Curso
      * 
-     * @param disciplina
+     * @param disciplina Disciplina
      */
     public void addDisciplina (Disciplina disciplina) {
         this.disciplinas.add(disciplina);

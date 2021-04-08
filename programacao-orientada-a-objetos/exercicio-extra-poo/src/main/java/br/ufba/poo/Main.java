@@ -12,16 +12,15 @@ public class Main {
      * Faz a abertura de algum arquivo
      * Pronto para fazer a análise do arquivo
      * 
-     * @param path
+     * @param path String
      * @return Scanner com arquivo já aberto
      */
     public static Scanner lerArquivo (String path) {
 
         try {
             File file = new File(path);
-            
-            Scanner leitor = new Scanner(file);
-            return leitor;
+
+            return new Scanner(file);
 
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado!");
@@ -35,8 +34,8 @@ public class Main {
      * Recebe o leitor do arquivo, e a partir dele faz a leitura
      * Criando os objetos da Universidade, Cursos e Disciplinas
      * 
-     * @param reader
-     * @param nomeDaUniversidade
+     * @param reader Scanner
+     * @param nomeDaUniversidade String
      * @return Universidade criada
      */
     public static Universidade criaUniversidade (Scanner reader, String nomeDaUniversidade) {
@@ -81,25 +80,26 @@ public class Main {
  
         Scanner leitor = lerArquivo("./src/main/resources/dados.txt");
 
+        assert leitor != null;
         Universidade ufba = criaUniversidade(leitor, "Universidade Federal da Bahia (UFBA)");
 
-        // Posso imprimir apenas a faculdadde com imprime();
+        // Posso imprimir apenas a faculdade com imprime();
         // E também imprimir todos os cursos e matérias dessa faculdade com imprimeTudo();
 
         ufba.imprime();
-        
+
         ArrayList<Curso> cursos = ufba.getCursos();
-        
+
         for (Curso curso : cursos) {
             curso.imprime();
             ArrayList<Disciplina> disciplinas = curso.getDisciplinas();
-        
+
             for (Disciplina disciplina : disciplinas) {
                 disciplina.imprime();
             }
         }
-                
-        // ufba.imprimeTudo();
+
+        //ufba.imprimeTudo();
     }
 }
         

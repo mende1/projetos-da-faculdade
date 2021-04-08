@@ -11,18 +11,18 @@ public class Universidade {
      * 
      * Construtor
      * 
-     * @param nome
+     * @param nome String
      */
     public Universidade (String nome) {
         this.nome = nome;
-        cursos = new ArrayList<Curso>();
+        cursos = new ArrayList<>();
     }
 
     /**
      * 
      * Adiciona um curso para a Universidade
      * 
-     * @param curso
+     * @param curso Curso
      */
     public void addCurso (Curso curso) {
         cursos.add(curso);
@@ -40,16 +40,18 @@ public class Universidade {
      * Imprime as informações somente da Universidade
      */
     public void imprime () {
-        System.out.println("\nFaculdade: " + nome);
-        System.out.println("Possui " + this.qtdCursos() + " Cursos\t Um total de " + this.qntDisciplinas() + " Disciplinas\n");
+        System.out.println("\n" + nome);
+        System.out.print("Possui " + this.qtdCursos() + " Cursos");
+        System.out.println("\t Um total de " + this.qntDisciplinas() + " Disciplinas");
     }
 
     /**
      * Imprime informações da Universidade e de todos os Cursos e Disciplicas que lhes pertence
      */
     public void imprimeTudo () {
-        System.out.println("\nFaculdade: " + nome);
-        System.out.println("Possui " + this.qtdCursos() + " Cursos\t Um total de " + this.qntDisciplinas() + " Disciplinas\n");
+        System.out.println("\n" + nome);
+        System.out.print("Possui " + this.qtdCursos() + " Cursos");
+        System.out.println("\t Um total de " + this.qntDisciplinas() + " Disciplinas");
 
         for (Curso curso : cursos) {
             curso.imprimeTudo();

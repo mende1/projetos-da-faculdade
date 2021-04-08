@@ -13,12 +13,12 @@ public class Disciplina {
      * 
      * Construtor
      * 
-     * @param nome
-     * @param codigo
-     * @param semestre
-     * @param natureza
-     * @param ch
-     * @param curriculo
+     * @param nome String
+     * @param codigo String
+     * @param semestre int
+     * @param natureza String
+     * @param ch int
+     * @param curriculo String
      */
     public Disciplina (String nome, String codigo, int semestre, String natureza, int ch, String curriculo) {
         this.nome = nome;
