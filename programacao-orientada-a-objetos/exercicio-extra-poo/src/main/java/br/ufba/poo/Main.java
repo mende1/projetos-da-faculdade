@@ -7,6 +7,14 @@ import java.util.Scanner;
 
 public class Main {
 
+    /**
+     * 
+     * Faz a abertura de algum arquivo
+     * Pronto para fazer a análise do arquivo
+     * 
+     * @param path
+     * @return Scanner com arquivo já aberto
+     */
     public static Scanner lerArquivo (String path) {
 
         try {
@@ -22,6 +30,15 @@ public class Main {
 
     }
 
+    /**
+     * 
+     * Recebe o leitor do arquivo, e a partir dele faz a leitura
+     * Criando os objetos da Universidade, Cursos e Disciplinas
+     * 
+     * @param reader
+     * @param nomeDaUniversidade
+     * @return Universidade criada
+     */
     public static Universidade criaUniversidade (Scanner reader, String nomeDaUniversidade) {
 
         Universidade universidade = new Universidade(nomeDaUniversidade);

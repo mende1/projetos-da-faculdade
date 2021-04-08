@@ -9,6 +9,17 @@ public class Disciplina {
     private int semestre;
     private int ch;
 
+    /**
+     * 
+     * Construtor
+     * 
+     * @param nome
+     * @param codigo
+     * @param semestre
+     * @param natureza
+     * @param ch
+     * @param curriculo
+     */
     public Disciplina (String nome, String codigo, int semestre, String natureza, int ch, String curriculo) {
         this.nome = nome;
         this.codigo = codigo;
@@ -18,6 +29,9 @@ public class Disciplina {
         this.curriculo = curriculo;
     }
 
+    /**
+     * Imprime todas as informações da Disciplina
+     */
     public void imprime () {
         System.out.println(nome);
         System.out.println(codigo + " " + semestre + " " + natureza + " " + ch + " " + curriculo);
