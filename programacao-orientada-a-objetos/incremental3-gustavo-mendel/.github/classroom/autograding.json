@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "TelaTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=TelaTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "RetanguloExceptionTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=RetanguloExceptionTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }   
+  ]
+}
