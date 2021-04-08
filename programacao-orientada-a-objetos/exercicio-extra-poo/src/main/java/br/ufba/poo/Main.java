@@ -23,10 +23,9 @@ public class Main {
             return new Scanner(file);
 
         } catch (FileNotFoundException e) {
-            System.out.println("Arquivo não encontrado!");
+            System.out.println("\nArquivo não encontrado!");
             return null;
         }
-
     }
 
     /**
@@ -80,26 +79,32 @@ public class Main {
  
         Scanner leitor = lerArquivo("./src/main/resources/dados.txt");
 
-        assert leitor != null;
-        Universidade ufba = criaUniversidade(leitor, "Universidade Federal da Bahia (UFBA)");
+        try {
+            Universidade ufba = criaUniversidade(leitor, "Universidade Federal da Bahia (UFBA)");
 
-        // Posso imprimir apenas a faculdade com imprime();
-        // E também imprimir todos os cursos e matérias dessa faculdade com imprimeTudo();
-
-        ufba.imprime();
-
-        ArrayList<Curso> cursos = ufba.getCursos();
-
-        for (Curso curso : cursos) {
-            curso.imprime();
-            ArrayList<Disciplina> disciplinas = curso.getDisciplinas();
-
-            for (Disciplina disciplina : disciplinas) {
-                disciplina.imprime();
+            // Posso imprimir apenas a faculdade com imprime();
+            // E também imprimir todos os cursos e matérias dessa faculdade com imprimeTudo();
+    
+            //ufba.imprimeTudo();
+            ufba.imprime();
+    
+            ArrayList<Curso> cursos = ufba.getCursos();
+    
+            for (Curso curso : cursos) {
+                curso.imprime();
+                ArrayList<Disciplina> disciplinas = curso.getDisciplinas();
+    
+                for (Disciplina disciplina : disciplinas) {
+                    disciplina.imprime();
+                }
             }
+    
+        }
+        catch (Throwable e) {
+            System.out.println("Erro encontrado... Fechando o programa...\n");
+            return;
         }
 
-        //ufba.imprimeTudo();
     }
 }
         

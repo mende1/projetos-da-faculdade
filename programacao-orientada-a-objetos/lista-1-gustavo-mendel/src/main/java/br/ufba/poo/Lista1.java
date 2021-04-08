@@ -88,7 +88,7 @@ public class Lista1 {
 	/**
 	 * Dado um arquivo, torna-o executável. Se o arquivo não existir, não faz nada.
 	 * 
-	 * @param arquivo Arquivo
+	 * @param File Arquivo
 	 */
 	public static void tornaExecutavel(File arquivo) {
 
