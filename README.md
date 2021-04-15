@@ -12,7 +12,7 @@ Desde 2019, até os dias atuais.
 
 Pela Universidade Federal da Bahia (UFBA).
 
-[Disciplinas Cursadas](https://github.com/gustavo-mendel/projetos-da-faculdade/blob/master/DISCIPLINAS.md)
+[Disciplinas Cursadas](https://github.com/mende1/projetos-da-faculdade/blob/master/DISCIPLINAS.md)
 
 
 ---
@@ -22,7 +22,7 @@ Pela Universidade Federal da Bahia (UFBA).
 
 Meu primeiro contato com programação na vida, onde aprendi o básico de programação e a sua lógica através da linguagem C++.
 
-[Meus códigos](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/introducao-a-logica-de-programacao)
+[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/introducao-a-logica-de-programacao)
 
 Tenho apenas os programas que escrevi, não lembrei de salvar os enunciados dos problemas.
 
@@ -47,7 +47,7 @@ Tenho apenas os programas que escrevi, não lembrei de salvar os enunciados dos 
 
 Aprofundamento em Lógica de Programação e nos recursos das linguagens de programação, usando C e C++.
 
-[Meus códigos](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/laboratorio-de-programacao)
+[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/laboratorio-de-programacao)
 *Dessa vez lembrei de pegar os enunciados das questões!*
 
 | Conteúdos estudados |
@@ -70,16 +70,16 @@ Um aprofundamento bem maior nos estudos e trabalhos mais complexos, usando bibli
 
 Uma matéria incrível, ministrada pelo incrível professor Antônio Apolinário, que mesmo com as dificuldades do ensino remoto perante à pandemia do COVID-19, conseguiu entregar um ensino realmente muito bom.
 
-[Os códigos](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos)
+[Os códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos)
 
 É importante frisar que muitos códigos foram feitos inicialmente pelo professor, sendo responsabilidade do aluno fazer as alterações necessáras para estudar os conceitos das aulas.
 
 #### Os principais trabalhos:
-[Problema 0](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-0-ordenacao-gustavo-mendel)
+[Problema 0](https://github.com/mende1/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-0-ordenacao-gustavo-mendel)
 
-[Problema 1](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-1---gerenciando-playlists-grupo-4)
+[Problema 1](https://github.com/mende1/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-1---gerenciando-playlists-grupo-4)
 
-[Problema 2](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-2-grupo4)
+[Problema 2](https://github.com/mende1/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-2-grupo4)
 
 Note que cada problema tem a descrição do professor do que deveria ser feito, e no diretório `src/` de cada problema tem a descrição detalhada da realização do problema.
 
@@ -92,7 +92,7 @@ Não é uma matéria da faculdade, mas neste período eu dei início ao estudo e
 Resolução de contests, treinos, maratonas, entre outros.
 E é aqui que deixarei guardado meus códigos juntamente com os problemsets dos mesmos.
 
-[Meus códigos](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/competicao)
+[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/competicao)
 
 ---
 ### Arquitetura de Computadores
@@ -100,7 +100,7 @@ E é aqui que deixarei guardado meus códigos juntamente com os problemsets dos 
 
 **_...Em andamento..._**
 
-[Meus códigos](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/arquitetura-de-computadores)
+[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/arquitetura-de-computadores)
 
 ---
 ### Programação Orientada a Objetos
@@ -108,6 +108,6 @@ E é aqui que deixarei guardado meus códigos juntamente com os problemsets dos 
 
 **_...Em andamento..._**
 
-[Meus códigos](https://github.com/gustavo-mendel/projetos-da-faculdade/tree/master/programacao-orientada-a-objetos)
+[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/programacao-orientada-a-objetos)
 
 ---
