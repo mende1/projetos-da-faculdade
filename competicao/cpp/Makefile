@@ -7,14 +7,12 @@ main: main.cpp
 
 on: main.cpp
 	g++ -o main main.cpp
-	./main < tests/in
+	./main < in
 	rm main
 
 diff: main.cpp
 	g++ -o main main.cpp
-	./main < tests/in > tests/out_mine
-	diff tests/out tests/out_mine
+	./main < in > out
+	diff out outm
 	rm main
 
-copy: main.cpp
-	cp main.cpp $(path)/$(name)
