@@ -4,3 +4,21 @@
 # Matrícula: 219215671
 #
 
+Agora, encontre/explique os seguintes componentes deste arquivo assembly:
+
+● O registrador representando a variável “k”:
+	s3
+	
+● O registrador representando a variável “sum”:
+	s0
+	
+● Os registradores atuando como ponteiros para os arrays “source” e “dest”:
+	s1 = source
+	s2 = dest
+	
+● O código em assembly para o loop encontrado no código em C:
+	
+	
+● Como os ponteiros são manipulados no código em assembly:
+	
+	
