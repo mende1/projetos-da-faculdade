@@ -7,11 +7,25 @@
 Agora, encontre/explique os seguintes componentes deste arquivo assembly:
 
 ● O registrador representando a variável “k”:
-	s3
+
+	O registrador que representa o valor de "k" é o t0. Como estamos usando "k" como índicie de arrays, precisamos de um pivô para representar uma quantidade de bytes, em outras palavras vamos acrescentar essa quantidade de bytes ao endereço inicial de algum array para obter a posição desejada que queremos acessar.
+	
+	Esse pivô é o registrador s3. E para fazer esse cálculo é logo na primeira linha do bloco Loop, onde fazemos 2 shifts para a esquerda de t0. Ou seja, multiplicamos o valor de k, o valor que está em t0, por 4, sendo 4 o tamanho da variável em bytes que desejamos, que é 32 bits, o tamanho de um inteiro int comum em C.
+	
+	Sendo assim, se temos k=2, s3 será 8, se temos k=3, s3 será 12. Logo, se queremos acessar a posição k de um array, pegamos o ponteiro desse array, vamos supor S, e adicionar com s3, que seria uma espécie de sizeof(int) * k. E pronto, temos acesso a posição array[k], com uma alusão a *(S+s3).
+	
+	Enfim, temos o registrador principal que contém o valor de "k" é o t0, onde é "inicializada" por assim se dizer, logo na bloco Main, que declaramos t0 = 0, uma espécie de inicializador do loop "for", onde temos k=0. Usamos ele (t0), além de indície de arrays, também como controlador da função. Identificamos ele pois é o registrador que está sendo incrementado no final do bloco Loop, "addi t0, t0, 1", que seria uma alusão ao k++ em C. E também é ele que está sendo usado para ver qual a posição dos arrays que queremos acessar, logo na primeira linha de Loop, "slli s3, t0, 2", onde fazemos todo o processo de contagem de bytes para ver a posição do array explicado antes.
+
+
 	
 ● O registrador representando a variável “sum”:
-	s0
+
+	O registrador que representa o valor de "sum" é o s0. Ela é "inicializada", por assim se dizer, ainda no bloco Main, onde ela recebe s0 = 0, em C temos "int sum = 0;"
 	
+	Referente ao "sum += dest[k]" do C, temos em RISC-V Assembly: add s0, s0, t2, já no finalzinho do bloco Loop. Onde s0 recebe a adição dela mesma com t2, que está representando o valor retornado da função fun(int x) e armazenado em dest[k]. Justamente o equivalente a C "sum += dest[k]".
+
+
+
 ● Os registradores atuando como ponteiros para os arrays “source” e “dest”:
 	s1 = source
 	s2 = dest

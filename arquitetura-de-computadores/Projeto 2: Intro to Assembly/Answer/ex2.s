@@ -24,10 +24,12 @@ dest:
 
 .text
 main:
-	# um tipo de inicialização de k, porém não é k ainda, um pivor por enquanto
+	# Inicialização de k = 0;
+    # t0 = k
     addi t0, x0, 0
 
-    # int sum = 0
+    # Inicialização de sum = 0;
+    # s0 = sum
     addi s0, x0, 0
 
     # Carregar os endereços dos arrays source e dest
@@ -35,22 +37,27 @@ main:
     la s1, source
     la s2, dest
 
-# loop for (k=0; source[k] != 0; k++)
+# loop => for (k=0; source[k] != 0; k++)
 loop:
 
-	# aqui não é k++, é a representação de bits de k++, onde ele vai somar com
-    # o tamanho do int que representa somar 1, elee vai fazer um shift para esquerda
-    # de 2, ou seja, multiplicar por 4, que é o 
+	# aqui não é k++, é a representação de bytes de k++, onde ele vai somar com
+    # o tamanho do int que representa somar 1, ele vai fazer um shift para esquerda
+    # de 2, ou seja, multiplicar por 4, que é o tamanho da variável que estamos trabalhando
+    # 
+    # Então se temos k = 3, s3 receberá 12, que é a quantidade de bytes necessária para mover
+    # k posições na memória, que trabalha com bytes
+    #
+    # Uma alusão a s3 = sizeof(int) * k
     slli s3, t0, 2
 
     # t1 recebe s1 + s3, ** significa que vai avançar em 1 posição no array source 
     # source[++k]
-    # (& de source) + k => S sendo endereço de source => ** S + k ** 
+    # (endereço de source) + sizeof(int) * k => S sendo endereço de source => ** S + ( sizeof(int) * k ) ** 
     add t1, s1, s3
 
-    # carrega a palavra de t1 para t2 => carrega o elemento S + k do array source
+    # carrega a palavra de t1 para t2 => carrega o elemento S + (sizeof(int) * k) do array source
     # t2 = source[k]
-    # em outras palavras, *(S + k)
+    # em outras palavras, t2 = *(S + sizeof(int) * k)
     lw t2, 0(t1)
 
     # se t2 == 0 pule para exit, ** significa se encontrar o último elemento do array, parar o loop
@@ -94,7 +101,7 @@ loop:
     # Faz parte do PASSO 5: CLEAN UP, LIMPAR A SUJEIRA
     addi sp, sp, 8
 
-    # t2 está recebendo a0, não sei bem o motivo
+    # t2 está recebendo a0, o retorno que a função gerou
     add t2, x0, a0
 
     # D é o endereço de dest
