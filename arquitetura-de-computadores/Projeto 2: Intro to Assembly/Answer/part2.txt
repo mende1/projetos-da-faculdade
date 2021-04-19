@@ -27,12 +27,36 @@ Agora, encontre/explique os seguintes componentes deste arquivo assembly:
 
 
 ● Os registradores atuando como ponteiros para os arrays “source” e “dest”:
-	s1 = source
-	s2 = dest
 	
+	O registrador atuando como ponteiro para o array "source" é o s1, e para o array "dest" é o s2. Eles são inicializados logo no bloco inicial Main. Onde recebem o valor do endereço dos arrays pela instrução "la" = "load address", onde ali pegam o endereço da memória da primeira posição do array de cada um. Permitindo assim ser utilizados como ponteiro para os arrays, pois a partir deles conseguimos fazer o acesso a todas as posições dele 
+
+
+
 ● O código em assembly para o loop encontrado no código em C:
+
+	O loop todo pode ser encontrado no bloco de label "Loop", ali para o início e final do bloco nós temos a parte de controle do loop, inicialização, incrementação e verificação da condição de parada. 
+	
+	A inicialização da variável de controle na verdade é feita antes ainda, no bloco Main, onde temos "addi t0, x0, 0", é referente a inicialização do loop "int k = 0", onde o registrador de "k" é o t0, já explicado na questão 1.
+	
+	Já a condição de parada é encontrado na linha "beq t2, x0, exit". Aqui estamos verificando se t2 é igual a 0, se for igual se direcionar para o bloco Exit, referente a saída do loop, e caso não seja, continuar para o restante da repetição. t2 se refere à variável "source[k]" em C. O registrador t2 é populado com esse dado "source[k]" um pouco antes da verificação.
+	
+	E por fim temos a incrementação do registrador t0 logo no final do bloco Loop, na seguinte instrução "addi t0, t0, 1". Aqui estamos pegando o valor que está em t0, adicionando 1 e colocando nele mesmo. Fazendo alusão à instrução "k++" em C. Essa é a incrementação da variável de controle do loop, essencial para parar a repetição em algum momento.
+	
+	Todas as outras instruções que estão no bloco Loop que não essas citadas acima, fazem parte do corpo do loop, as instruções que vão ser chamadas a cada rodada do loop, elas não necessariamente tem a ver com a definição da repetição, é apenas o que vai ser feito por ela. Exceto por algumas delas que tem influência direta na condição de parada "source[k]", pois como explicado na questão 01, temos algumas instruções ali que vai fazer o trabalho de mover posições na memória para acessar posições do array, ou seja, vão ser responsáveis por acessar "source[k]" e ter a condição de parada do loop.
+	
 	
 	
 ● Como os ponteiros são manipulados no código em assembly:
+	
+	Os registradores que atuam como ponteiros contém o endereço da memória stack do array que ela aponta. No caso, para cada posição do array, teremos um endereço de memória, então esse ponteiro conterá o endereço apenas da primeira posição desse array. Sendo arr[n] um array, os registradores então contém o endereço que faz alusão ao endereço de arr[0].
+	
+	Então esses ponteiro devem set manipulados para conseguir acessar qualquer posição do array desejado. A definição de array em C é que existe uma sequência de valores armazenados na memória, com o diferencial de que o endereço de cada posição desse array esteja em ordem na memória. Ou seja, o endereço de arr[1] é o próximo endereço depois de arr[0] por assim se dizer e assim por diante. A quantidade de bits/bytes que separam cada um desses endereços depende do tipo dos valores que estamos armazenando. É por isso que em C, não podemos ter arrays primitivos de tipos de dados diferentes. Todos devem ser do mesmo tipo para ter o tamanho de bits que separam endereços de posições consecutivas sejam sempre constantes. Com essa característica, o acesso a qualquer posição do array é feita da seguinte forma.
+	
+	A partir do endereço de memória da posição inicial, ou seja arr[0], conseguimos acessas a qualquer posição desse array tendo o número da posição desejada, o indície em outras palavras, e também o tamanho do tipo de dados que estamos armazenando no array. Em nosso caso, estamos considerando um array de int32 bits, ou seja, 4 bytes. Então o endereço de cada posição desse array vai está separado por 4 bytes da sua próxima posição. Então para acessar, por exemplo, a posição N de um array (começando a contar do zero), conseguimos acessar da seguinte forma: &arr[0] + (sizeof(int) * N), (& é endereço), imaginando que o endereço de arr[0] seja 12 (apenas exemplo), então o endereço da posição N = 5 será: &arr[5] = 12 + 4 * 5 => &arr[5] = 32, onde arr[0] = 12, 4 é o tamanho de int32 em bytes, e 5 é a posição que queremos acessar N. E dessa maneira o C consegue armazenas dados de maneira organizada e extramamente otimizada de acesso nos arrays.
+	
+	Voltando ao Assembly, no nosso código ex2.s, nós temos os ponteiros para os arrays "source" e "dest" os registradores s1 e s2 respectivamente, e eles apontam para o endereço da primeira posição do array, arr[0]. Como explicado nas questões anteriores, a variável que indica os indícies desejados do array é o "k", representado pelo registrador t0, arr[k]. Então para fazer essa manipulação, nós primeiros multiplicamos k pelo tamanho de int32 em bytes, ou seja 4 bytes, k*4, nós fazemos isso na instrução "slli s3, t0, 2", que é um shift para a esquerda de 2 bits, uma maneira otimizada de multiplicar o valor por 4.
+	
+	E então praticamente temos nosso acesso a qualquer posição do array, basta pegar o ponteiro do array desejado, s1 ou s2, e adicionar com s3, que é o sizeof(int) * k, em suma, a quantidade de bytes que desejamos pular na memória a partir do endereço inicial do ponteiro. Então alguns exemplos de instruções no código que faz isso: "add t1, s1, s3", onde acessamos source[k], e aqui "lw t2, 0(t1)" carregamos o valor que está na posição; e aqui "add t3, s2, s3" acessamos dest[k], e em seguida, "sw t2, 0(t3)" onde guardamos um valor nessa posição do array dest. 
+	
 	
 	
