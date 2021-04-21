@@ -1,0 +1,33 @@
+    name: GitHub Classroom Workflow
+
+    on: [push]
+
+    jobs:
+      build:
+        name: Autograding
+        runs-on: ubuntu-latest
+        env:
+          TESTS_REPO: ufba-poo-2021-1/poo-lista3-tests
+          TESTS_FOLDER: src/test/java
+        steps:
+          - name: Baixa código
+            uses: actions/checkout@v2
+
+          # Usa diretório de testes de outro repositório
+          # O outro repositório deve ser nomeado <REPO>-tests,
+          #   onde <REPO> é o nome do repositório atual
+          # Se o repositório de testes for privado, você deve 
+          #   fornecer um personal access token
+          - name: Apaga testes locais
+            run: rm -rf ${{ env.TESTS_FOLDER }}
+          - name: Copia testes de outro repositório
+            uses: actions/checkout@master
+            with:
+              repository: ${{ env.TESTS_REPO }}
+              path: ${{ env.TESTS_FOLDER }}
+              token: ${{ secrets.my_pat }}
+
+          - name: Instala dependências
+            run: mvn package -B -ntp -Dmaven.test.skip=true
+          - name: Avalia respostas
+            uses: education/autograding@v1

@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "TelaTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=TelaTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "RetanguloTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=RetanguloTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "RotuloTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=RotuloTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ComponenteTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=ComponenteTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }   
+  ]
+}
