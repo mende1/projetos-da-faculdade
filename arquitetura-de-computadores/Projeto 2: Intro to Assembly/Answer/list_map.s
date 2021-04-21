@@ -90,7 +90,7 @@ create_default_list:
     sw  s1, 8(sp)
     li  s0, 0       # pointer to the last node we handled
     li  s1, 0       # number of nodes handled
-loop:   #do...
+loop:   # do...
     li  a0, 8
     jal ra, malloc      # get memory for the next node
     sw  s1, 0(a0)   # node->value = i

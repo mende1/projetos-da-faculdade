@@ -41,9 +41,7 @@ Tenho apenas os programas que escrevi, não lembrei de salvar os enunciados dos 
 
 ---
 ### Laboratório de Programação I
-[ 2020.3 ] - Semestre Letivo Suplementar (SLS)
-
-*Estudo Remoto, ante à pandemia do COVID-19*
+[ 2020.3 ] - Semestre Letivo Suplementar (SLS) - Estudo Remoto, ante à pandemia do COVID-19
 
 Aprofundamento em Lógica de Programação e nos recursos das linguagens de programação, usando C e C++.
 
@@ -59,16 +57,14 @@ Aprofundamento em Lógica de Programação e nos recursos das linguagens de prog
 
 ---
 ### Estrutura de Dados e Algoritmos I
-[ 2020.3 ] - Semestre Letivo Suplementar (SLS)
-
-*Estudo Remoto, ante à pandemia do COVID-19*
+[ 2020.3 ] - Semestre Letivo Suplementar (SLS) - Estudo Remoto, ante à pandemia do COVID-19
 
 **Aqui inicio o estudo de algorigmos, como compreender, aplicar seus conceitos básicos e analisá-los.
 E também o básico de estruturas de dados, e como implementá-las.**
 
 Um aprofundamento bem maior nos estudos e trabalhos mais complexos, usando bibliotecas gráficas para auxiliar no entendimento, assim como estruturas bem definidas para praticidade com vetores, como o vector. Usamos C++.
 
-Uma matéria incrível, ministrada pelo incrível professor Antônio Apolinário, que mesmo com as dificuldades do ensino remoto perante à pandemia do COVID-19, conseguiu entregar um ensino realmente muito bom.
+Uma matéria incrível, ministrada pelo professor [Antônio Apolinário](https://github.com/alopesajr), que mesmo com as dificuldades do ensino remoto perante à pandemia do COVID-19, conseguiu entregar um ensino realmente muito bom.
 
 [Os códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos)
 
@@ -81,7 +77,7 @@ Uma matéria incrível, ministrada pelo incrível professor Antônio Apolinário
 
 [Problema 2](https://github.com/mende1/projetos-da-faculdade/tree/master/estrutura-de-dados-e-algoritmos/problema-2-grupo4)
 
-Note que cada problema tem a descrição do professor do que deveria ser feito, e no diretório `src/` de cada problema tem a descrição detalhada da realização do problema.
+Note que cada problema tem a descrição do professor do que deveria ser feito, e no diretório `src/` de cada problema tem a descrição detalhada da realização da solução do problema.
 
 ---
 ### Programação para Competições
@@ -92,7 +88,7 @@ Não é uma matéria da faculdade, mas neste período eu dei início ao estudo e
 Resolução de contests, treinos, maratonas, entre outros.
 E é aqui que deixarei guardado meus códigos juntamente com os problemsets dos mesmos.
 
-[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/competicao)
+[Meus códigos](https://github.com/mende1/contest)
 
 ---
 ### Arquitetura de Computadores
@@ -106,7 +102,11 @@ E é aqui que deixarei guardado meus códigos juntamente com os problemsets dos 
 ### Programação Orientada a Objetos
 [ 2021.1 ] - Estudo ainda remoto
 
-**_...Em andamento..._**
+Os pilares da programação Orientada a Objetos, teoria e prática. Abstração, Encapsulamento, Herança e Polimofismo.
+
+Matéria maravilhosa com o Professor [Rodrigo Rocha](https://github.com/rodrigorgs). Resolução de Listas e desafios incrementais com bibliotecas gráficas para o aprendizado do assunto.
+
+*Disciplina feita em Java :coffee:.*
 
 [Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/programacao-orientada-a-objetos)
 
