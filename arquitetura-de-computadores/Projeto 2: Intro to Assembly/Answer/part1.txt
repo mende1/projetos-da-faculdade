@@ -1,7 +1,6 @@
 #
 # Aluno: Gustavo Mendel Queiroz e Souza
 # E-mail: gustavo.mendel.br@gmail.com
-# Matrícula: 219215671
 #
 
 1. Em RISC-V temos as diretrizes, como por exemplo .data, .word e .text; Em suma essas diretrizes representam diferentes tipos de dados e principalmente onde são armazenados na memória. Veremos com mais entonação a diferença entre o data e o text.

@@ -1,7 +1,6 @@
 #
 # Aluno: Gustavo Mendel Queiroz e Souza
 # E-mail: gustavo.mendel.br@gmail.com
-# Matrícula: 219215671
 #
 
 # Usado como base o seguinte código em C:

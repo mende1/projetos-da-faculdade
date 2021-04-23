@@ -189,9 +189,8 @@ int logicalShift(int x, int n) {
  *   Rating: 4 
  */
 int logicalNeg(int x) {
-  return 2;
+  return (((~x + 1) >> 31) | (x >> 31)) + 1;
 }
-
 /* 
  * TMax - return maximum two's complement integer 
  *   Legal ops: ! ~ & ^ | + << >>
