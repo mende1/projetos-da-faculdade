@@ -4,7 +4,7 @@ import com.googlecode.lanterna.TextColor;
 
 import br.ufba.myterminal.MyTerminal;
 
-public class Componente {
+public abstract class Componente {
     
     protected Ponto origem;
     protected TextColor corDeFrente;
@@ -34,7 +34,5 @@ public class Componente {
         this.corDeFundo = corDeFundo;
     }
 
-    public void desenha(MyTerminal terminal) {
-    }
-
+    public abstract void desenha(MyTerminal terminal);
 }
