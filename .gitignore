@@ -45,3 +45,5 @@
 */.mvn/wrapper/maven-wrapper.jar
 *.iml
 */.idea
+.idea
+*/.idea/*
