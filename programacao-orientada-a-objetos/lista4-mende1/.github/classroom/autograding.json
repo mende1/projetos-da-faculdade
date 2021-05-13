@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "ParTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=ParTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaDobradaTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=ListaDobradaTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "AlunoTest",
+      "setup": "",
+      "run": "mvn -q -B -ntp -Dtest=AlunoTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
