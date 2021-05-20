@@ -9,7 +9,7 @@ all: riscv part1 part2
 .PHONY: part1 part2 %_disasm %_execute
 
 riscv: $(SOURCES) $(HEADERS) out
-	gcc -g -Wpedantic -Wall -Wextra -Werror -std=c99 -o $@ $(SOURCES)
+	gcc -g -std=c99 -o $@ $(SOURCES)
 
 out:
 	@mkdir -p ./riscvcode/out
