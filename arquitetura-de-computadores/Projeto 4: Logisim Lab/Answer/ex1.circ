@@ -304,45 +304,46 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(320,260)" to="(320,390)"/>
     <wire from="(370,440)" to="(420,440)"/>
     <wire from="(710,210)" to="(710,280)"/>
     <wire from="(250,240)" to="(550,240)"/>
     <wire from="(250,190)" to="(550,190)"/>
     <wire from="(250,340)" to="(550,340)"/>
-    <wire from="(380,360)" to="(550,360)"/>
     <wire from="(250,290)" to="(550,290)"/>
     <wire from="(710,280)" to="(750,280)"/>
-    <wire from="(380,310)" to="(550,310)"/>
     <wire from="(680,260)" to="(680,290)"/>
+    <wire from="(320,310)" to="(320,390)"/>
+    <wire from="(380,360)" to="(480,360)"/>
     <wire from="(380,360)" to="(380,390)"/>
     <wire from="(600,210)" to="(710,210)"/>
     <wire from="(420,440)" to="(460,440)"/>
     <wire from="(320,210)" to="(550,210)"/>
-    <wire from="(320,260)" to="(550,260)"/>
     <wire from="(510,380)" to="(550,380)"/>
-    <wire from="(510,280)" to="(550,280)"/>
+    <wire from="(320,310)" to="(550,310)"/>
+    <wire from="(510,330)" to="(550,330)"/>
+    <wire from="(320,210)" to="(320,310)"/>
     <wire from="(680,320)" to="(680,360)"/>
     <wire from="(250,440)" to="(340,440)"/>
-    <wire from="(420,230)" to="(420,330)"/>
     <wire from="(600,310)" to="(750,310)"/>
-    <wire from="(510,280)" to="(510,380)"/>
+    <wire from="(480,260)" to="(480,360)"/>
+    <wire from="(420,280)" to="(420,440)"/>
     <wire from="(300,390)" to="(320,390)"/>
-    <wire from="(420,330)" to="(420,440)"/>
     <wire from="(320,390)" to="(340,390)"/>
     <wire from="(490,440)" to="(510,440)"/>
     <wire from="(250,390)" to="(270,390)"/>
     <wire from="(680,320)" to="(750,320)"/>
     <wire from="(680,290)" to="(750,290)"/>
     <wire from="(370,390)" to="(380,390)"/>
-    <wire from="(320,210)" to="(320,260)"/>
-    <wire from="(380,310)" to="(380,360)"/>
-    <wire from="(420,330)" to="(550,330)"/>
+    <wire from="(420,230)" to="(420,280)"/>
+    <wire from="(510,330)" to="(510,380)"/>
     <wire from="(420,230)" to="(550,230)"/>
+    <wire from="(420,280)" to="(550,280)"/>
     <wire from="(600,360)" to="(680,360)"/>
     <wire from="(600,260)" to="(680,260)"/>
     <wire from="(800,300)" to="(810,300)"/>
     <wire from="(510,380)" to="(510,440)"/>
+    <wire from="(480,360)" to="(550,360)"/>
+    <wire from="(480,260)" to="(550,260)"/>
     <comp lib="0" loc="(250,190)" name="Pin">
       <a name="label" val="A"/>
     </comp>
