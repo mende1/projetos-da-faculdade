@@ -22,7 +22,7 @@ Pela Universidade Federal da Bahia (UFBA).
 
 Meu primeiro contato com programação na vida, onde aprendi o básico de programação e a sua lógica através da linguagem C++.
 
-[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/introducao-a-logica-de-programacao)
+[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/introducao-a-logica-de-programacao/Turma%202019.2)
 
 Tenho apenas os programas que escrevi, não lembrei de salvar os enunciados dos problemas.
 
@@ -38,6 +38,10 @@ Tenho apenas os programas que escrevi, não lembrei de salvar os enunciados dos 
 |Algoritmos de ordenação    |
 |Algoritmos de busca binária|
 |Funções e Recursividade    |
+
+Felizmente consegui com amigos da turma de 2020.3 (SLS) as questões daquele semestre, e peguei para brincar um pouco.
+
+[Códigos aqui](https://github.com/mende1/projetos-da-faculdade/tree/master/introducao-a-logica-de-programacao/Turma%202020.2)
 
 ---
 ### Laboratório de Programação I
@@ -55,6 +59,10 @@ Aprofundamento em Lógica de Programação e nos recursos das linguagens de prog
 | Funções             |
 | Ponteiros           |
 | Alocação Dinâmica   |
+
+Como em ILP, consegui questões e assuntos também de outra turma, desta vez de 2021.1, que abrangeu ainda mais assuntos sobre a matéria, como Vector, Queue, Stack, List, Map, Pair, Set, e algumas funções da biblioteca Algorithm.
+
+[Códigos aqui](https://github.com/mende1/projetos-da-faculdade/tree/master/laboratorio-de-programacao/Turma%202021.1)
 
 ---
 ### Estrutura de Dados e Algoritmos I
