@@ -1,4 +1,4 @@
-<img src="computer_science.svg" width="300" align="right">
+<img src="Computer_science.svg" width="300" align="right">
 
 # Matérias Cursadas
 
