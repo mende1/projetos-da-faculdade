@@ -5,7 +5,7 @@ using namespace std;
 
 int main () {
 
-	int n;
+	int n, index;
 	cin >> n;
 
 	int cod[n];
@@ -23,29 +23,30 @@ int main () {
 		cin >> p;
 
 		int l = 0;
-		int r = n-1;
+		int r = n;
 
 		while (l <= r) {
-			int m = (l + r) / 2;
+			int m = l + (r - l) / 2;
 
-			if (p < arr[m]) {
-				r = m - 1;
+			if (arr[m] == p) {
+				index = m;
+				break;
 			}
 
-			else if (p > arr[m]) {
+			else if (arr[m] < p) {
 				l = m + 1;
 			}
 
 			else {
-				break;
+				r = m - 1;
 			}
 		}
 
-		if (p == arr[m]) {
-			if (cod[m] == 1) {
+		if (p == arr[index]) {
+			if (cod[index] == 1) {
 				cout << "Disponivel" << endl;
 			}
-			else if (cod[m] == 2) {
+			else if (cod[index] == 2) {
 				cout << "Emprestado" << endl;
 			}
 		}
