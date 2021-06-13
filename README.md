@@ -103,7 +103,11 @@ E é aqui que deixarei guardado meus códigos juntamente com os problemsets dos 
 ### Arquitetura de Computadores
 [ 2021.1 ] - Estudo ainda remoto
 
-**_...Em andamento..._**
+Continuação de Projeto de Circuitos Lógicos, aqui estudamos mais baixo nível na programação de computadores.
+
+Estudo de Assembly usando RISC-V, e ainda desenvolvendo um mini-emulador de RISC-V, baseado no Vênus.
+
+E também design de Computador, com ALUs, RegFiles, e mais, usando o Logisim.
 
 [Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/arquitetura-de-computadores)
 
