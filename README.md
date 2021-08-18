@@ -136,13 +136,3 @@ Em andamento...
 
 ---
 
-### Monitoria em Introdução a Lógica de Programação
-[ 2021.2 ] - Estudo ainda remoto
-
-Em andamento...
-
-*Python :snake:.*
-
-[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/monitoria-ilp)
-
----
