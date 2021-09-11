@@ -1,0 +1,116 @@
+
+Seu objetivo é modificar sua cópia do arquivo bits.c para que ele passe 
+em todos os testes do arquivo btest sem violar nenhuma instrução.
+
+
+****************************************
+0. Arquivos (apenas os mais importantes)
+****************************************
+
+bits.c		- O arquivo que você deverá alterar e entregar
+btest.c		- O arquivo de testes
+dlc*		- Checa as regras e compila
+driver.py*  	- Programa que fará uma auto-avaliação do código, baseado nos testes feitos pelo btest e dlc
+fshow.c		- Examina representações com ponto flutuante
+ishow.c		- Examina representações com inteiros
+
+***********************************************************
+1. Alterando bits.c e o checando com dlc
+***********************************************************
+
+IMPORTANTE: Leia atenciosamente as instruções em bits.c antes de começar.
+Elas dão as regras que você deverá seguir se quiser que seu código tenha a 
+nota máxima.
+
+Use o compilador dlc (./dlc) para automaticamente checar se a sua versão
+do bits.c é compatível com as instruções.
+
+       unix> ./dlc bits.c
+
+dlc não retorna nada se não houver nenhum problema em seu código.
+Se houver, retorna os erros. Rodar o dlc seguido de -e
+
+    	unix> ./dlc -e bits.c  
+
+retorna o número de operadores usados por cada função.
+
+Uma vez que você tenha uma solução possível, você poderá testar se ela 
+está correta utilizando o programa ./btest.
+
+*********************
+2. Testando com btest
+*********************
+
+Para compilar e executar o programa btest, digite:
+
+    unix> make btest
+    unix> ./btest [argumentos opcionais]
+
+Você precisará compilar o btest novamente a cada mudança no bits.c.
+Use os comandos:
+
+    unix> make clean
+    unix> make btest
+
+Btest testa seu código rodando milhões de casos de teste em cada função.
+Quando btest detecta um erro em uma de suas funções,
+ele exibirá o teste que falhou, o resultado incorreto, e o resultado esperado, 
+e então terminará os testes para aquela função.
+
+Aqui estão as opções adicionais do btest:
+
+  unix> ./btest -h
+  Uso: ./btest [-hg] [-r <n>] [-f <name> [-1|-2|-3 <val>]*] [-T <time limit>]
+    -1 <val>  Especificar primeiro argumento da função
+    -2 <val>  Especificar segundo argumento da função
+    -3 <val>  Especificar terceiro argumento da função
+    -f <nome> Testa apenas a função digitada
+    -g        Formata o resultado com a auto-avaliação, porém sem mensagens de erro
+    -h        Exibe esta mensagem
+    -r <n>    Da o peso "n" para todos os problemas
+    -T <lim>  Define o tempo máximo como "lim"
+
+Exemplos
+
+  Testa todas as funções e exibe as mensagens de erro:
+  unix> ./btest
+
+  Testa todas as funções em uma forma compacta sem mensagens de erro:
+  unix> ./btest -g
+
+  Testa a função "foo":
+  unix> ./btest -f foo
+
+  Testa a função "foo" com argumentos específicos:
+  unix> ./btest -f foo -1 27 -2 0xf
+
+Btest não checa se o seu código está de acordo com as instruções. Use dlc para isso.
+
+***********************
+3. Programas Auxiliares
+***********************
+
+Os programas ishow e fshow te ajudam a decifrar representações inteiras
+e ponto flutuante, respectivamente. Cada uma recebe um único número 
+decimal ou hexadecimal como argumento. Para usá-las, digite:
+
+    unix> make
+
+Exemplos de uso:
+
+    unix> ./ishow 0x27
+    Hex = 0x00000027,	Signed = 39,	Unsigned = 39
+
+    unix> ./ishow 27
+    Hex = 0x0000001b,	Signed = 27,	Unsigned = 27
+
+    unix> ./fshow 0x15213243
+    Floating point value 3.255334057e-26
+    Bit Representation 0x15213243, sign = 0, exponent = 0x2a, fraction = 0x213243
+    Normalized.  +1.2593463659 X 2^(-85)
+
+    linux> ./fshow 15213243
+    Floating point value 2.131829405e-38
+    Bit Representation 0x00e822bb, sign = 0, exponent = 0x01, fraction = 0x6822bb
+    Normalized.  +1.8135598898 X 2^(-126)
+
