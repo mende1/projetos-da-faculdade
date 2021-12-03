@@ -124,15 +124,3 @@ Matéria maravilhosa com o Professor [Rodrigo Rocha](https://github.com/rodrigor
 [Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/programacao-orientada-a-objetos)
 
 ---
-
-### Linguagens Formais e Autômatos
-[ 2021.2 ] - Estudo ainda remoto
-
-Em andamento...
-
-*Disciplina feita em Python :snake:.*
-
-[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/linguagens-formais-e-automatos)
-
----
-
