@@ -124,3 +124,17 @@ Matéria maravilhosa com o Professor [Rodrigo Rocha](https://github.com/rodrigor
 [Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/programacao-orientada-a-objetos)
 
 ---
+### Monitoria ILP (Introdução à Lógica de Programação)
+[ 2021.2 ] - Estudo ainda remoto
+
+Realizada monitoria na matéria de introdução à Programação.
+
+Ajudando na montagem de questões de listas e provas. Realizando testes nas questões já feitas. Atendimento aos alunos para tirar dúvidas e ajuda no assuntos.
+
+*Realizado em Python 🐍*
+
+[Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/monitoria-ilp)
+
+[Slides das aulas do Professor Rodrigo](https://rodrigorgs.github.io/aulas/ilp/)
+
+---
