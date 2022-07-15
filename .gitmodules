@@ -1,0 +1,6 @@
+[submodule "engenharia-de-software-I/mata62-backend"]
+	path = engenharia-de-software-I/mata62-backend
+	url = https://github.com/matheusnovaisz/mata62-backend
+[submodule "engenharia-de-software-I/mata62-front"]
+	path = engenharia-de-software-I/mata62-front
+	url = https://github.com/mende1/mata62-front
