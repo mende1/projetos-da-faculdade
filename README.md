@@ -6,7 +6,7 @@
 
 Bacharelado em **Ciência da Computação**. 
 
-Em curso :mortar_board:
+Em andamento :mortar_board:
 
 Desde 2019, até os dias atuais.
 
@@ -68,7 +68,7 @@ Aprofundamento em Lógica de Programação e nos recursos das linguagens de prog
 ### Estrutura de Dados e Algoritmos I
 [ 2020.3 ] - Semestre Letivo Suplementar (SLS) - Estudo Remoto, ante à pandemia do COVID-19
 
-**Aqui inicio o estudo de algorigmos, como compreender, aplicar seus conceitos básicos e analisá-los.
+**Aqui inicio o estudo de algorigmos: como compreender, aplicar seus conceitos básicos e analisá-los.
 E também o básico de estruturas de dados, e como implementá-las.**
 
 Um aprofundamento bem maior nos estudos e trabalhos mais complexos, usando bibliotecas gráficas para auxiliar no entendimento, assim como estruturas bem definidas para praticidade com vetores, como o vector. Usamos C++.
@@ -136,5 +136,26 @@ Ajudando na montagem de questões de listas e provas. Realizando testes nas ques
 [Meus códigos](https://github.com/mende1/projetos-da-faculdade/tree/master/monitoria-ilp)
 
 [Slides das aulas do Professor Rodrigo](https://rodrigorgs.github.io/aulas/ilp/)
+
+---
+
+### Linguagens Formais e Autômatos
+[ 2022.2 ]
+
+Foi estudado conceito de **linguagem**, **gramática** geradora de linguagem, **autômatos finitos e infinitos** reconhecedores de linguagens. E mais:
+
+* Hierarquia de Chomsky. 
+* Linguagens regulares e expressões regulares. 
+* Reconhecedores, geradores e propriedades das linguagens discriminadas na hierarquia de Chomsky.
+* Ambiguidade e simplificação de gramáticas livres de contexto.
+* Formas normais de gramáticas livres de contexto.
+
+Matéria ministrada pelo incrível professor [Tiago Januário](https://github.com/srtjanuario), que conseguiu trazer metodologias e atividades bem práticas apesar da disciplina ser bastante teórica. 
+
+Através do Google Colab, com a linguagem de programação Python, nós fizemos atividades envolvendo programação para estudar os conceitos vistos em sala de aula. E também exercícios envolvendo a integração da API do Twitter para obter tweets recentes e a partir deles, aplicar a lógica teórica da matéria para diversos fins práticos, inclusive análise sentimental dos usuários.
+
+*Realizado em Python 🐍*
+
+[Minhas atividades](https://github.com/mende1/projetos-da-faculdade/tree/master/linguagens-formais-e-automatos/turma2022)
 
 ---
