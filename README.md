@@ -182,19 +182,23 @@ Com o incrível professor [Dr. Prof. Felipe Padilha](http://lattes.cnpq.br/56084
 
 A disciplina teve com objetivo final a escrita de um projeto de pesquisa, com ideia original do estudante (que inclusive pode ser aproveitada no TCC), com metodologias bem embasadas, referencial bibliográfico bem revisado e organizado e com um cronograma final de 12 meses para o planejamento final do projeto.
 
-Inicialmente foi feito um resumo da ideia do estudante sobre o tema do trabalho, listando qual era a questão de pesquisa, os objetivos, motivações e as metodologias. Depois disso foi feito uma versão inicial do projeto, e após as sugestões e correções do professor, foi produzido a versão final que pode ser encontrado no link a seguir.
-
-[Projeto de Pesquisa - Versão Final](https://github.com/mende1/projetos-da-faculdade/tree/master/mmetodologia-e-expressao-tecnico-cientifica/Projeto%20de%20Pesquisa%20-%20Gustavo%20Mendel.pdf)
-
+Inicialmente foi feito um resumo da ideia do estudante sobre o tema do trabalho, listando qual era a questão de pesquisa, os objetivos, motivações e as metodologias. Depois disso foi feito uma versão inicial do projeto, e após as sugestões e correções do professor, foi produzido a versão final do trabalho. Segue as informações abaixo:
 
 Título:
 
-> APRENDIZADO COM PROJETOS DE CÓDIGO ABERTO: COMO A PARTICIPAÇÃO EM AMBIENTES DE DESENVOLVIMENTO DE CÓDIGO ABERTO PODE CONTRIBUIR PARA A FORMAÇÃO PROFISSIONAL DE UM ESTUDANTE DE ENGENHARIA DE SOFTWARE
+> Aprendizado com projetos de código aberto: como a participação em ambientes de desenvolvimento de código aberto pode contribuir para a formação profissional de um estudante de engenharia de software
+
 
 Resumo do Projeto de Pesquisa:
 
-> A indústria de Engenharia de Software vem sofrendo com a falta de profissionais devidamente qualificados desta área e a falta de atividades práticas e realistas nas disciplinas de Engenharia de Software pode ser a razão para isto. Já os Projetos de Código Aberto vêm se mostrando uma ótima alternativa para os estudantes e professores aproveitarem como método do aprendizado, já que estes projetos possuem um ótimo ambiente colaborativo formado por profissionais do mundo inteiro e conta também com um cenário totalmente realista para se praticar os conceitos da área. Neste âmbito, o principal objetivo deste trabalho é buscar entender como a participação do estudante em Projetos de Código Aberto pode contribuir para a formação profissional como engenheiro de software.
+> A indústria de Engenharia de Software vem sofrendo com a falta de profissionais devidamente qualificados desta área, e a falta de atividades práticas e realistas nas disciplinas de Engenharia de Software pode ser a razão para isto. Já os Projetos de Código Aberto vêm se mostrando uma ótima alternativa para os estudantes e professores aproveitarem como método do aprendizado, já que estes projetos possuem um ótimo ambiente colaborativo formado por profissionais do mundo inteiro e conta também com um cenário totalmente realista para se praticar os conceitos da área. Neste âmbito, o principal objetivo deste trabalho é buscar entender como a participação do estudante em Projetos de Código Aberto pode contribuir para a sua formação profissional como engenheiro de software.
 
-Autor: Gustavo Mendel Queiroz e Souza.
+Autor: 
+
+> Gustavo Mendel Queiroz e Souza.
+
+Link:
+
+> [Projeto de Pesquisa - Versão Final](https://github.com/mende1/projetos-da-faculdade/tree/master/metodologia-e-expressao-tecnico-cientifica/Projeto%20de%20Pesquisa%20-%20Gustavo%20Mendel.pdf)
 
 ---
