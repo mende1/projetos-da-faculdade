@@ -1,0 +1,9 @@
+
+
+   if   ( b ) 
+	print(1); // tab
+   else print (0);
+
+
+
+

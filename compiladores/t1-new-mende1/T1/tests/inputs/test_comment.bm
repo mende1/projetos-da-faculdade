@@ -1,0 +1,7 @@
+// First line
+// Second line
+   if (b) 
+      print(1); // End of line
+// else
+//    print(0);
+
