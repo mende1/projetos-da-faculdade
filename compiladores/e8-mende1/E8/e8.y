@@ -25,7 +25,7 @@ void yyerror(char *s, ...)
 %type <e> expr term factor program
 
 /* declare tokens */ 
-%token <value> NUMBER
+%token <e> NUMBER
 %token <e> ERROR
 %token <e> EOL
 %token <e> PLUS
@@ -53,7 +53,7 @@ term
 ;
 
 factor
-: NUMBER                 { $$ = expr_create_value($1); }
+: NUMBER                 { $$ = $1; }
 | OPENP expr CLOSEP      { $$ = $2; }
 ;
 

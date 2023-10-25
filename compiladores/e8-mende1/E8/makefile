@@ -1,9 +1,10 @@
 install:
-	sudo apt-get install bison
+	sudo apt install bison build-essential -y
 
 compile:
 	bison -d e8.y
-	cc -o avalia lex.yy.o e8.tab.c main.c ast.c
+	flex e8.l
+	cc -o avalia lex.yy.c e8.tab.c main.c ast.c
 
 
 test:

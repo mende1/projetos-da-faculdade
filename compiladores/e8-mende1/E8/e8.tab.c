@@ -1368,7 +1368,7 @@ yyreduce:
 
   case 8:
 #line 56 "e8.y"
-    { (yyval.e) = expr_create_value((yyvsp[(1) - (1)].value)); ;}
+    { (yyval.e) = (yyvsp[(1) - (1)].e); ;}
     break;
 
   case 9:
