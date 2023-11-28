@@ -4,3 +4,9 @@
 [submodule "engenharia-de-software-I/mata62-front"]
 	path = engenharia-de-software-I/mata62-front
 	url = https://github.com/mende1/mata62-front
+[submodule "topicos-em-sistema-web/frontend"]
+	path = topicos-em-sistema-web/frontend
+	url = https://github.com/ic045-sistemaacademico-2023/frontend-sistema-academico-ic-ufba
+[submodule "topicos-em-sistema-web/backend"]
+	path = topicos-em-sistema-web/backend
+	url = https://github.com/ic045-sistemaacademico-2023/backend-sistema-academico-ic-ufba
