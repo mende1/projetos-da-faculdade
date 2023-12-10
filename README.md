@@ -216,3 +216,73 @@ Link:
 > [Projeto de Pesquisa - Versão Final](https://github.com/mende1/projetos-da-faculdade/tree/master/metodologia-e-expressao-tecnico-cientifica/Projeto%20de%20Pesquisa%20-%20Gustavo%20Mendel.pdf)
 
 ---
+
+### Compiladores
+
+[ 2023.2 ] - Estudo presencial
+
+Estudo dos fundamentos de compiladores, abrangendo desde os conceitos básicos até a implementação de ferramentas como análise léxica e sintática.
+
+Ministrada pela professora [Christina von Flach](https://github.com/christinaflach), esta disciplina cobriu tópicos fundamentais:
+
+- Básicos de compiladores
+- Análise léxica e sintática
+- Gramáticas ambíguas
+- Uso de ferramentas como Flex e Bison (Yacc)
+- Construção de Árvores Sintáticas Abstratas (AST)
+
+Os trabalhos realizados durante o curso estão disponíveis [neste diretório](https://github.com/mende1/projetos-da-faculdade/tree/main/compiladores). Eles incluem exercícios práticos e implementações relacionadas aos conceitos aprendidos em sala de aula.
+
+---
+
+### Análise e Projetos de Algoritmos
+
+[ 2023.2 ] - Estudo presencial
+
+Sob a orientação do Professor Rafael Melo, esta disciplina proporcionou uma ampla compreensão dos fundamentos da análise e desenvolvimento de algoritmos, cobrindo diversos tópicos:
+
+- Estudo aprofundado dos algoritmos fundamentais
+- Notações de complexidade: Omega, O e Theta
+- Recursões e suas aplicações na resolução de problemas
+- Algoritmos de ordenação e suas eficiências
+- Programação Dinâmica (PD) para otimização de soluções
+- Backtracking para soluções exploratórias (nome técnico a ser confirmado)
+- Algoritmos gulosos e sua aplicabilidade
+
+O material desenvolvido durante a disciplina pode ser encontrado [neste diretório](https://github.com/mende1/projetos-da-faculdade/tree/main/analise-e-projeto-de-algoritmo).
+
+O aprendizado adquirido durante a disciplina proporcionou uma compreensão mais profunda da eficiência dos algoritmos e estratégias para resolver problemas complexos em diversas áreas da computação.
+
+---
+
+### Tópicos em Sistemas de Informação e Web I
+
+[ 2023.2 ] - Desenvolvimento prático
+
+Sob a supervisão do incrível Professor [Fred Durao](https://github.com/freddurao), esta disciplina foi uma imersão completa no desenvolvimento web, abrangendo tanto o front-end quanto o back-end, além da gestão de projetos.
+
+A abordagem adotada foi de simular uma relação real entre clientes e desenvolvedores, onde os alunos eram responsáveis por resolver problemas e atender requisitos semanais, refletindo a dinâmica de um ambiente profissional.
+
+O projeto principal consistiu no desenvolvimento de um **Sistema de Gestão Acadêmica**. Este sistema permitia que universidades gerenciassem recursos como Cursos, Disciplinas, Turmas, Alunos, Professores, Coordenadores, entre outros.
+
+As tecnologias utilizadas foram:
+
+#### Front-end
+- Framework React
+- Tailwind CSS para estilização
+- React Hook Forms para gerenciamento de formulários
+
+O código front-end está disponível [neste repositório](https://github.com/ic045-sistemaacademico-2023/frontend-sistema-academico-ic-ufba).
+
+#### Back-end
+- Spring Boot em Java
+
+O código back-end pode ser encontrado [aqui](https://github.com/ic045-sistemaacademico-2023/backend-sistema-academico-ic-ufba).
+
+Além dos repositórios, foi elaborada uma apresentação do projeto, disponível [neste vídeo](https://youtu.be/L6D1AFkdkhE).
+
+Essa experiência prática foi fundamental, pois proporcionou aos alunos a oportunidade de aplicar conhecimentos adquiridos em um ambiente simulado de desenvolvimento profissional. A dinâmica de entrega semanal de requisitos e a complexidade do projeto permitiram uma compreensão mais aprofundada do ciclo de desenvolvimento de sistemas web.
+
+O aprendizado adquirido foi significativo, pois não se restringiu apenas ao uso das tecnologias, mas também à interação com clientes simulados e à resolução de problemas reais encontrados durante o desenvolvimento do sistema.
+
+---
