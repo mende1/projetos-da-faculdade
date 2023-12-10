@@ -1,0 +1,16 @@
+// nested function
+
+foo: function boolean (a:integer) = { 
+   bar: function integer () = { 
+     return 1; 
+   }
+
+   return (a > bar());
+
+}
+
+main: function void (arga: integer) = { 
+   print foo(arga); 
+}
+
+

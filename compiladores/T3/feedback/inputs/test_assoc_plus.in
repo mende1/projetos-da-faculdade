@@ -1,0 +1,18 @@
+main: function void () = {
+
+i: integer = 10;
+j: integer = 2;
+k: integer = 5;
+
+x: integer;
+y: integer;
+
+t: boolean;
+f: boolean;
+
+
+x = i + j + k;
+
+print x;
+
+}

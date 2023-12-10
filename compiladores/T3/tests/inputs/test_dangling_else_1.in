@@ -1,0 +1,8 @@
+// test_dangling_else_1
+
+main: function integer () = {
+if (a > 5)  
+{ if (b == 0) return a; }
+else
+  return 0-a;
+}

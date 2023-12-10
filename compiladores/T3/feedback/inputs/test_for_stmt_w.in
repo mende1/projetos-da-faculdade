@@ -1,0 +1,9 @@
+main: function void ( ) = {
+   a:integer;
+
+   for (a=0; a<10; a=a+1) {
+      c = a + b;
+   }
+   
+   // imprimir c;
+}

@@ -1,0 +1,17 @@
+[program 
+[func-declaration 
+[void]
+[main]
+[params
+]
+[block 
+[selection-stmt 
+[> [var [a]][10]]
+[selection-stmt 
+[== [var [b]][0]]
+[return-stmt [var [a]]]
+[else 
+[return-stmt 
+[- [0][var [a]]]]]]]]
+]
+]

@@ -1,0 +1,3 @@
+// TP2 test: no type_specifier in function
+main; function ()  = { return ; }
+

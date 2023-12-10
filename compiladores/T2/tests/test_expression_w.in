@@ -1,0 +1,2 @@
+main: function void() = { print a + c d; }
+

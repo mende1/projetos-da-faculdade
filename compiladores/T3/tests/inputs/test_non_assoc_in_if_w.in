@@ -1,0 +1,8 @@
+// nonassoc <
+
+main: function integer () = {
+
+if (a < b > c) // error
+  return a;
+}
+

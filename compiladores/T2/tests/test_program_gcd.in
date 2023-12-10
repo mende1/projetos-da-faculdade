@@ -1,0 +1,18 @@
+// A program to perform Euclid's
+//  Algorithm to compute gcd.
+
+gcd: function integer (u: integer, v: integer) = 
+{
+    if (v == 0) return u ;
+    else return gcd(v,u-u/v*v);
+    //u-u/v*v == u mod v
+}
+
+main: function void() =
+{
+    x: integer;
+    y: integer;
+    x = input();
+    y = input();
+    print gcd(x,y);
+}

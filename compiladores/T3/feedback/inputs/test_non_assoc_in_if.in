@@ -1,0 +1,11 @@
+// expr logica
+
+main: function integer () = {
+a: integer;
+b: integer;
+read(a,b);
+if ((a < b) != true) 
+  return a;
+}
+
+

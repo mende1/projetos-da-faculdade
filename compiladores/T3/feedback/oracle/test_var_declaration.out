@@ -1,0 +1,14 @@
+[program 
+[func-declaration 
+[void]
+[main]
+[params
+]
+[block 
+[var-declaration [int][a]]
+[var-declaration [int][b][999]]
+[expression-stmt 
+[= [var [a]][var [b]]]
+]]
+]
+]

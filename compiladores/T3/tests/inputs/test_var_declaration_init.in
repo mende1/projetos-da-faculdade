@@ -1,0 +1,13 @@
+main: function void () = {
+
+total: integer;
+falhou: boolean;
+
+n_rodas: integer = 2;
+e_novo: boolean = true;
+
+n_marchas = 10;
+
+print n_rodas, n_marchas;
+
+}

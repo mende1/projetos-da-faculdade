@@ -1,0 +1,20 @@
+
+square: function integer ( x: integer ) = {
+    return x*x;
+}
+
+// main.bm
+
+ab_1: integer;
+
+main: function integer () = {
+    ab_2: integer;
+    read(ab_1);
+    read(ab_2);
+
+    if (square(ab_1) > (ab_2*10))
+       print ab_1;
+    else
+       print ab_2;
+}
+

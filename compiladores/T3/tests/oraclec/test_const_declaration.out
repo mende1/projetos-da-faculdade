@@ -1,0 +1,14 @@
+
+[program
+[var-declaration
+[int]
+[min]
+[1]]
+[func-declaration
+[void]
+[main]
+[params]
+[block
+[return-stmt
+[;]]]]]
+

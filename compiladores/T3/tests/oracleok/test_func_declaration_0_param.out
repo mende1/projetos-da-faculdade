@@ -1,0 +1,10 @@
+
+[program
+[func-declaration
+[void]
+[main]
+[params]
+[block
+[return-stmt
+[;]]]]]
+

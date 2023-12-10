@@ -1,0 +1,3 @@
+// TP2 test:  valid const declaration
+min: integer = 1;
+main: function void () = { return ; }

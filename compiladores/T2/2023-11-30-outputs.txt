@@ -1,0 +1,99 @@
+
+-       32 analisados
+
+- test_assoc_minus.in: 
+no syntax error
+
+- test_assoc_plus.in: 
+no syntax error
+
+- test_assoc_times.in: 
+no syntax error
+
+- test_const_declaration.in: 
+no syntax error
+
+- test_dangling_else.in: 
+no syntax error
+
+- test_dangling_else_1.in: 
+no syntax error
+
+- test_dangling_else_2.in: 
+syntax error
+
+- test_expression_w.in: 
+syntax error
+
+- test_for_stmt_w.in: 
+syntax error
+
+- test_func_declaration_0_param.in: 
+no syntax error
+
+- test_func_declaration_1_param.in: 
+no syntax error
+
+- test_func_declaration_1_w.in: 
+syntax error
+
+- test_func_declaration_2_w.in: 
+syntax error
+
+- test_func_declaration_3_param.in: 
+no syntax error
+
+- test_func_declaration_no_return_type_w.in: 
+syntax error
+
+- test_func_declaration_type.in: 
+no syntax error
+
+- test_if_else.in: 
+syntax error
+
+- test_non_assoc_expr.in: 
+no syntax error
+
+- test_non_assoc_expr_w.in: 
+syntax error
+
+- test_non_assoc_in_if_w.in: 
+syntax error
+
+- test_preced_1.in: 
+no syntax error
+
+- test_preced_2.in: 
+no syntax error
+
+- test_program_empty_w.in: 
+syntax error
+
+- test_program_gcd.in: 
+no syntax error
+
+- test_program_gcd_w.in: 
+syntax error
+
+- test_simple.in: 
+no syntax error
+
+- test_simple_w.in: 
+syntax error
+
+- test_var_declaration.in: 
+no syntax error
+
+- test_var_declaration_init.in: 
+no syntax error
+
+- test_var_declaration_only_w.in: 
+syntax error
+
+- test_while_stmt.in: 
+no syntax error
+
+- test_while_stmt_w.in: 
+syntax error
+

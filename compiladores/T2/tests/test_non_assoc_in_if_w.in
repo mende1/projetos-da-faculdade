@@ -1,0 +1,5 @@
+main: function integer () = {
+
+if a >  5 > b // error
+  return a;
+

@@ -1,0 +1,1488 @@
+Terminals unused in grammar
+
+    STR
+    ERROR
+
+
+State 83 conflicts: 1 shift/reduce
+State 115 conflicts: 1 shift/reduce
+
+
+Grammar
+
+    0 $accept: program $end
+
+    1 program: declarations
+
+    2 declarations: declarations declaration
+    3             | declaration
+
+    4 declaration: var_declaration SEMICOLON
+    5            | func_declaration
+
+    6 type: INTEGER
+    7     | BOOLEAN
+    8     | VOID
+
+    9 func_declaration: ID COLON FUNCTION type LPAREN params RPAREN ASSIGN block
+
+   10 params: ε
+   11       | param_list
+
+   12 param_list: param COMMA param_list
+   13           | param
+
+   14 param: ID COLON type
+
+   15 var_declaration: ID COLON type
+   16                | ID COLON type ASSIGN expr
+
+   17 block: LBRACE statements RBRACE
+   18      | LBRACE local_declarations statements RBRACE
+
+   19 statements: statement statements
+   20           | statement
+
+   21 local_declarations: local_declaration local_declarations
+   22                   | local_declaration
+
+   23 local_declaration: var_declaration SEMICOLON
+
+   24 statement: block
+   25          | assignment_statement SEMICOLON
+   26          | return_statement SEMICOLON
+   27          | if_statement
+   28          | while_statement
+   29          | print_statement SEMICOLON
+
+   30 assignment_statement: ID ASSIGN expr
+
+   31 return_statement: RETURN expr
+   32                 | RETURN
+
+   33 if_statement: IF LPAREN expr RPAREN statement
+   34             | IF LPAREN expr RPAREN statement ELSE statement
+
+   35 while_statement: WHILE LPAREN expr RPAREN statement
+
+   36 print_statement: PRINT print_arguments
+
+   37 print_arguments: expr
+   38                | expr COMMA print_arguments
+
+   39 expr: expr_add
+   40     | expr_relational
+
+   41 expr_add: expr_add PLUS expr_mult
+   42         | expr_mult
+
+   43 expr_mult: expr_mult TIMES expr_divide
+   44          | expr_divide
+
+   45 expr_divide: expr_divide DIVIDE expr_minus
+   46            | expr_minus
+
+   47 expr_minus: expr_minus MINUS expr_primary
+   48           | expr_primary
+
+   49 expr_relational: expr_primary LT expr_primary
+   50                | expr_primary LEQ expr_primary
+   51                | expr_primary GT expr_primary
+   52                | expr_primary GEQ expr_primary
+   53                | expr_primary EQ expr_primary
+   54                | expr_primary NEQ expr_primary
+
+   55 expr_primary: ID
+   56             | INTEGER_CONST
+   57             | BOOLEAN_CONST_FALSE
+   58             | BOOLEAN_CONST_TRUE
+   59             | LPAREN expr RPAREN
+   60             | function_call
+
+   61 function_call: ID LPAREN RPAREN
+   62              | ID LPAREN function_call_arguments RPAREN
+
+   63 function_call_arguments: expr
+   64                        | function_call_arguments COMMA expr
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    error (256)
+    ID <name> (258) 9 14 15 16 30 55 61 62
+    INTEGER <integer> (259) 6
+    BOOLEAN <integer> (260) 7
+    VOID <type> (261) 8
+    PLUS (262) 41
+    MINUS (263) 47
+    TIMES (264) 43
+    DIVIDE (265) 45
+    LT (266) 49
+    LEQ (267) 50
+    GT (268) 51
+    GEQ (269) 52
+    EQ (270) 53
+    NEQ (271) 54
+    ASSIGN (272) 9 16 30
+    COLON (273) 9 14 15 16
+    SEMICOLON (274) 4 23 25 26 29
+    LPAREN (275) 9 33 34 35 59 61 62
+    RPAREN (276) 9 33 34 35 59 61 62
+    LBRACE (277) 17 18
+    RBRACE (278) 17 18
+    FUNCTION (279) 9
+    IF (280) 33 34
+    ELSE (281) 34
+    WHILE (282) 35
+    RETURN (283) 31 32
+    PRINT (284) 36
+    COMMA (285) 12 38 64
+    INTEGER_CONST (286) 56
+    BOOLEAN_CONST_TRUE (287) 58
+    BOOLEAN_CONST_FALSE (288) 57
+    STR (289)
+    ERROR (290)
+
+
+Nonterminals, with rules where they appear
+
+    $accept (36)
+        on left: 0
+    program <decl> (37)
+        on left: 1
+        on right: 0
+    declarations <decl> (38)
+        on left: 2 3
+        on right: 1 2
+    declaration <decl> (39)
+        on left: 4 5
+        on right: 2 3
+    type <type> (40)
+        on left: 6 7 8
+        on right: 9 14 15 16
+    func_declaration <decl> (41)
+        on left: 9
+        on right: 5
+    params <param_list> (42)
+        on left: 10 11
+        on right: 9
+    param_list <param_list> (43)
+        on left: 12 13
+        on right: 11 12
+    param <param_list> (44)
+        on left: 14
+        on right: 12 13
+    var_declaration <decl> (45)
+        on left: 15 16
+        on right: 4 23
+    block <stmt> (46)
+        on left: 17 18
+        on right: 9 24
+    statements <stmt> (47)
+        on left: 19 20
+        on right: 17 18 19
+    local_declarations <decl> (48)
+        on left: 21 22
+        on right: 18 21
+    local_declaration <decl> (49)
+        on left: 23
+        on right: 21 22
+    statement <stmt> (50)
+        on left: 24 25 26 27 28 29
+        on right: 19 20 33 34 35
+    assignment_statement <stmt> (51)
+        on left: 30
+        on right: 25
+    return_statement <stmt> (52)
+        on left: 31 32
+        on right: 26
+    if_statement <stmt> (53)
+        on left: 33 34
+        on right: 27
+    while_statement <stmt> (54)
+        on left: 35
+        on right: 28
+    print_statement <stmt> (55)
+        on left: 36
+        on right: 29
+    print_arguments <expr> (56)
+        on left: 37 38
+        on right: 36 38
+    expr <expr> (57)
+        on left: 39 40
+        on right: 16 30 31 33 34 35 37 38 59 63 64
+    expr_add <expr> (58)
+        on left: 41 42
+        on right: 39 41
+    expr_mult <expr> (59)
+        on left: 43 44
+        on right: 41 42 43
+    expr_divide <expr> (60)
+        on left: 45 46
+        on right: 43 44 45
+    expr_minus <expr> (61)
+        on left: 47 48
+        on right: 45 46 47
+    expr_relational <expr> (62)
+        on left: 49 50 51 52 53 54
+        on right: 40
+    expr_primary <expr> (63)
+        on left: 55 56 57 58 59 60
+        on right: 47 48 49 50 51 52 53 54
+    function_call <expr> (64)
+        on left: 61 62
+        on right: 60
+    function_call_arguments <expr> (65)
+        on left: 63 64
+        on right: 62 64
+
+
+State 0
+
+    0 $accept: • program $end
+
+    ID  shift, and go to state 1
+
+    program           go to state 2
+    declarations      go to state 3
+    declaration       go to state 4
+    func_declaration  go to state 5
+    var_declaration   go to state 6
+
+
+State 1
+
+    9 func_declaration: ID • COLON FUNCTION type LPAREN params RPAREN ASSIGN block
+   15 var_declaration: ID • COLON type
+   16                | ID • COLON type ASSIGN expr
+
+    COLON  shift, and go to state 7
+
+
+State 2
+
+    0 $accept: program • $end
+
+    $end  shift, and go to state 8
+
+
+State 3
+
+    1 program: declarations •
+    2 declarations: declarations • declaration
+
+    ID  shift, and go to state 1
+
+    $default  reduce using rule 1 (program)
+
+    declaration       go to state 9
+    func_declaration  go to state 5
+    var_declaration   go to state 6
+
+
+State 4
+
+    3 declarations: declaration •
+
+    $default  reduce using rule 3 (declarations)
+
+
+State 5
+
+    5 declaration: func_declaration •
+
+    $default  reduce using rule 5 (declaration)
+
+
+State 6
+
+    4 declaration: var_declaration • SEMICOLON
+
+    SEMICOLON  shift, and go to state 10
+
+
+State 7
+
+    9 func_declaration: ID COLON • FUNCTION type LPAREN params RPAREN ASSIGN block
+   15 var_declaration: ID COLON • type
+   16                | ID COLON • type ASSIGN expr
+
+    INTEGER   shift, and go to state 11
+    BOOLEAN   shift, and go to state 12
+    VOID      shift, and go to state 13
+    FUNCTION  shift, and go to state 14
+
+    type  go to state 15
+
+
+State 8
+
+    0 $accept: program $end •
+
+    $default  accept
+
+
+State 9
+
+    2 declarations: declarations declaration •
+
+    $default  reduce using rule 2 (declarations)
+
+
+State 10
+
+    4 declaration: var_declaration SEMICOLON •
+
+    $default  reduce using rule 4 (declaration)
+
+
+State 11
+
+    6 type: INTEGER •
+
+    $default  reduce using rule 6 (type)
+
+
+State 12
+
+    7 type: BOOLEAN •
+
+    $default  reduce using rule 7 (type)
+
+
+State 13
+
+    8 type: VOID •
+
+    $default  reduce using rule 8 (type)
+
+
+State 14
+
+    9 func_declaration: ID COLON FUNCTION • type LPAREN params RPAREN ASSIGN block
+
+    INTEGER  shift, and go to state 11
+    BOOLEAN  shift, and go to state 12
+    VOID     shift, and go to state 13
+
+    type  go to state 16
+
+
+State 15
+
+   15 var_declaration: ID COLON type •
+   16                | ID COLON type • ASSIGN expr
+
+    ASSIGN  shift, and go to state 17
+
+    $default  reduce using rule 15 (var_declaration)
+
+
+State 16
+
+    9 func_declaration: ID COLON FUNCTION type • LPAREN params RPAREN ASSIGN block
+
+    LPAREN  shift, and go to state 18
+
+
+State 17
+
+   16 var_declaration: ID COLON type ASSIGN • expr
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr             go to state 24
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 18
+
+    9 func_declaration: ID COLON FUNCTION type LPAREN • params RPAREN ASSIGN block
+
+    ID  shift, and go to state 32
+
+    $default  reduce using rule 10 (params)
+
+    params      go to state 33
+    param_list  go to state 34
+    param       go to state 35
+
+
+State 19
+
+   55 expr_primary: ID •
+   61 function_call: ID • LPAREN RPAREN
+   62              | ID • LPAREN function_call_arguments RPAREN
+
+    LPAREN  shift, and go to state 36
+
+    $default  reduce using rule 55 (expr_primary)
+
+
+State 20
+
+   59 expr_primary: LPAREN • expr RPAREN
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr             go to state 37
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 21
+
+   56 expr_primary: INTEGER_CONST •
+
+    $default  reduce using rule 56 (expr_primary)
+
+
+State 22
+
+   58 expr_primary: BOOLEAN_CONST_TRUE •
+
+    $default  reduce using rule 58 (expr_primary)
+
+
+State 23
+
+   57 expr_primary: BOOLEAN_CONST_FALSE •
+
+    $default  reduce using rule 57 (expr_primary)
+
+
+State 24
+
+   16 var_declaration: ID COLON type ASSIGN expr •
+
+    $default  reduce using rule 16 (var_declaration)
+
+
+State 25
+
+   39 expr: expr_add •
+   41 expr_add: expr_add • PLUS expr_mult
+
+    PLUS  shift, and go to state 38
+
+    $default  reduce using rule 39 (expr)
+
+
+State 26
+
+   42 expr_add: expr_mult •
+   43 expr_mult: expr_mult • TIMES expr_divide
+
+    TIMES  shift, and go to state 39
+
+    $default  reduce using rule 42 (expr_add)
+
+
+State 27
+
+   44 expr_mult: expr_divide •
+   45 expr_divide: expr_divide • DIVIDE expr_minus
+
+    DIVIDE  shift, and go to state 40
+
+    $default  reduce using rule 44 (expr_mult)
+
+
+State 28
+
+   46 expr_divide: expr_minus •
+   47 expr_minus: expr_minus • MINUS expr_primary
+
+    MINUS  shift, and go to state 41
+
+    $default  reduce using rule 46 (expr_divide)
+
+
+State 29
+
+   40 expr: expr_relational •
+
+    $default  reduce using rule 40 (expr)
+
+
+State 30
+
+   48 expr_minus: expr_primary •
+   49 expr_relational: expr_primary • LT expr_primary
+   50                | expr_primary • LEQ expr_primary
+   51                | expr_primary • GT expr_primary
+   52                | expr_primary • GEQ expr_primary
+   53                | expr_primary • EQ expr_primary
+   54                | expr_primary • NEQ expr_primary
+
+    LT   shift, and go to state 42
+    LEQ  shift, and go to state 43
+    GT   shift, and go to state 44
+    GEQ  shift, and go to state 45
+    EQ   shift, and go to state 46
+    NEQ  shift, and go to state 47
+
+    $default  reduce using rule 48 (expr_minus)
+
+
+State 31
+
+   60 expr_primary: function_call •
+
+    $default  reduce using rule 60 (expr_primary)
+
+
+State 32
+
+   14 param: ID • COLON type
+
+    COLON  shift, and go to state 48
+
+
+State 33
+
+    9 func_declaration: ID COLON FUNCTION type LPAREN params • RPAREN ASSIGN block
+
+    RPAREN  shift, and go to state 49
+
+
+State 34
+
+   11 params: param_list •
+
+    $default  reduce using rule 11 (params)
+
+
+State 35
+
+   12 param_list: param • COMMA param_list
+   13           | param •
+
+    COMMA  shift, and go to state 50
+
+    $default  reduce using rule 13 (param_list)
+
+
+State 36
+
+   61 function_call: ID LPAREN • RPAREN
+   62              | ID LPAREN • function_call_arguments RPAREN
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    RPAREN               shift, and go to state 51
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr                     go to state 52
+    expr_add                 go to state 25
+    expr_mult                go to state 26
+    expr_divide              go to state 27
+    expr_minus               go to state 28
+    expr_relational          go to state 29
+    expr_primary             go to state 30
+    function_call            go to state 31
+    function_call_arguments  go to state 53
+
+
+State 37
+
+   59 expr_primary: LPAREN expr • RPAREN
+
+    RPAREN  shift, and go to state 54
+
+
+State 38
+
+   41 expr_add: expr_add PLUS • expr_mult
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_mult      go to state 55
+    expr_divide    go to state 27
+    expr_minus     go to state 28
+    expr_primary   go to state 56
+    function_call  go to state 31
+
+
+State 39
+
+   43 expr_mult: expr_mult TIMES • expr_divide
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_divide    go to state 57
+    expr_minus     go to state 28
+    expr_primary   go to state 56
+    function_call  go to state 31
+
+
+State 40
+
+   45 expr_divide: expr_divide DIVIDE • expr_minus
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_minus     go to state 58
+    expr_primary   go to state 56
+    function_call  go to state 31
+
+
+State 41
+
+   47 expr_minus: expr_minus MINUS • expr_primary
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_primary   go to state 59
+    function_call  go to state 31
+
+
+State 42
+
+   49 expr_relational: expr_primary LT • expr_primary
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_primary   go to state 60
+    function_call  go to state 31
+
+
+State 43
+
+   50 expr_relational: expr_primary LEQ • expr_primary
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_primary   go to state 61
+    function_call  go to state 31
+
+
+State 44
+
+   51 expr_relational: expr_primary GT • expr_primary
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_primary   go to state 62
+    function_call  go to state 31
+
+
+State 45
+
+   52 expr_relational: expr_primary GEQ • expr_primary
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_primary   go to state 63
+    function_call  go to state 31
+
+
+State 46
+
+   53 expr_relational: expr_primary EQ • expr_primary
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_primary   go to state 64
+    function_call  go to state 31
+
+
+State 47
+
+   54 expr_relational: expr_primary NEQ • expr_primary
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr_primary   go to state 65
+    function_call  go to state 31
+
+
+State 48
+
+   14 param: ID COLON • type
+
+    INTEGER  shift, and go to state 11
+    BOOLEAN  shift, and go to state 12
+    VOID     shift, and go to state 13
+
+    type  go to state 66
+
+
+State 49
+
+    9 func_declaration: ID COLON FUNCTION type LPAREN params RPAREN • ASSIGN block
+
+    ASSIGN  shift, and go to state 67
+
+
+State 50
+
+   12 param_list: param COMMA • param_list
+
+    ID  shift, and go to state 32
+
+    param_list  go to state 68
+    param       go to state 35
+
+
+State 51
+
+   61 function_call: ID LPAREN RPAREN •
+
+    $default  reduce using rule 61 (function_call)
+
+
+State 52
+
+   63 function_call_arguments: expr •
+
+    $default  reduce using rule 63 (function_call_arguments)
+
+
+State 53
+
+   62 function_call: ID LPAREN function_call_arguments • RPAREN
+   64 function_call_arguments: function_call_arguments • COMMA expr
+
+    RPAREN  shift, and go to state 69
+    COMMA   shift, and go to state 70
+
+
+State 54
+
+   59 expr_primary: LPAREN expr RPAREN •
+
+    $default  reduce using rule 59 (expr_primary)
+
+
+State 55
+
+   41 expr_add: expr_add PLUS expr_mult •
+   43 expr_mult: expr_mult • TIMES expr_divide
+
+    TIMES  shift, and go to state 39
+
+    $default  reduce using rule 41 (expr_add)
+
+
+State 56
+
+   48 expr_minus: expr_primary •
+
+    $default  reduce using rule 48 (expr_minus)
+
+
+State 57
+
+   43 expr_mult: expr_mult TIMES expr_divide •
+   45 expr_divide: expr_divide • DIVIDE expr_minus
+
+    DIVIDE  shift, and go to state 40
+
+    $default  reduce using rule 43 (expr_mult)
+
+
+State 58
+
+   45 expr_divide: expr_divide DIVIDE expr_minus •
+   47 expr_minus: expr_minus • MINUS expr_primary
+
+    MINUS  shift, and go to state 41
+
+    $default  reduce using rule 45 (expr_divide)
+
+
+State 59
+
+   47 expr_minus: expr_minus MINUS expr_primary •
+
+    $default  reduce using rule 47 (expr_minus)
+
+
+State 60
+
+   49 expr_relational: expr_primary LT expr_primary •
+
+    $default  reduce using rule 49 (expr_relational)
+
+
+State 61
+
+   50 expr_relational: expr_primary LEQ expr_primary •
+
+    $default  reduce using rule 50 (expr_relational)
+
+
+State 62
+
+   51 expr_relational: expr_primary GT expr_primary •
+
+    $default  reduce using rule 51 (expr_relational)
+
+
+State 63
+
+   52 expr_relational: expr_primary GEQ expr_primary •
+
+    $default  reduce using rule 52 (expr_relational)
+
+
+State 64
+
+   53 expr_relational: expr_primary EQ expr_primary •
+
+    $default  reduce using rule 53 (expr_relational)
+
+
+State 65
+
+   54 expr_relational: expr_primary NEQ expr_primary •
+
+    $default  reduce using rule 54 (expr_relational)
+
+
+State 66
+
+   14 param: ID COLON type •
+
+    $default  reduce using rule 14 (param)
+
+
+State 67
+
+    9 func_declaration: ID COLON FUNCTION type LPAREN params RPAREN ASSIGN • block
+
+    LBRACE  shift, and go to state 71
+
+    block  go to state 72
+
+
+State 68
+
+   12 param_list: param COMMA param_list •
+
+    $default  reduce using rule 12 (param_list)
+
+
+State 69
+
+   62 function_call: ID LPAREN function_call_arguments RPAREN •
+
+    $default  reduce using rule 62 (function_call)
+
+
+State 70
+
+   64 function_call_arguments: function_call_arguments COMMA • expr
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr             go to state 73
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 71
+
+   17 block: LBRACE • statements RBRACE
+   18      | LBRACE • local_declarations statements RBRACE
+
+    ID      shift, and go to state 74
+    LBRACE  shift, and go to state 71
+    IF      shift, and go to state 75
+    WHILE   shift, and go to state 76
+    RETURN  shift, and go to state 77
+    PRINT   shift, and go to state 78
+
+    var_declaration       go to state 79
+    block                 go to state 80
+    statements            go to state 81
+    local_declarations    go to state 82
+    local_declaration     go to state 83
+    statement             go to state 84
+    assignment_statement  go to state 85
+    return_statement      go to state 86
+    if_statement          go to state 87
+    while_statement       go to state 88
+    print_statement       go to state 89
+
+
+State 72
+
+    9 func_declaration: ID COLON FUNCTION type LPAREN params RPAREN ASSIGN block •
+
+    $default  reduce using rule 9 (func_declaration)
+
+
+State 73
+
+   64 function_call_arguments: function_call_arguments COMMA expr •
+
+    $default  reduce using rule 64 (function_call_arguments)
+
+
+State 74
+
+   15 var_declaration: ID • COLON type
+   16                | ID • COLON type ASSIGN expr
+   30 assignment_statement: ID • ASSIGN expr
+
+    ASSIGN  shift, and go to state 90
+    COLON   shift, and go to state 91
+
+
+State 75
+
+   33 if_statement: IF • LPAREN expr RPAREN statement
+   34             | IF • LPAREN expr RPAREN statement ELSE statement
+
+    LPAREN  shift, and go to state 92
+
+
+State 76
+
+   35 while_statement: WHILE • LPAREN expr RPAREN statement
+
+    LPAREN  shift, and go to state 93
+
+
+State 77
+
+   31 return_statement: RETURN • expr
+   32                 | RETURN •
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    $default  reduce using rule 32 (return_statement)
+
+    expr             go to state 94
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 78
+
+   36 print_statement: PRINT • print_arguments
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    print_arguments  go to state 95
+    expr             go to state 96
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 79
+
+   23 local_declaration: var_declaration • SEMICOLON
+
+    SEMICOLON  shift, and go to state 97
+
+
+State 80
+
+   24 statement: block •
+
+    $default  reduce using rule 24 (statement)
+
+
+State 81
+
+   17 block: LBRACE statements • RBRACE
+
+    RBRACE  shift, and go to state 98
+
+
+State 82
+
+   18 block: LBRACE local_declarations • statements RBRACE
+
+    ID      shift, and go to state 99
+    LBRACE  shift, and go to state 71
+    IF      shift, and go to state 75
+    WHILE   shift, and go to state 76
+    RETURN  shift, and go to state 77
+    PRINT   shift, and go to state 78
+
+    block                 go to state 80
+    statements            go to state 100
+    statement             go to state 84
+    assignment_statement  go to state 85
+    return_statement      go to state 86
+    if_statement          go to state 87
+    while_statement       go to state 88
+    print_statement       go to state 89
+
+
+State 83
+
+   21 local_declarations: local_declaration • local_declarations
+   22                   | local_declaration •
+
+    ID  shift, and go to state 101
+
+    ID        [reduce using rule 22 (local_declarations)]
+    $default  reduce using rule 22 (local_declarations)
+
+    var_declaration     go to state 79
+    local_declarations  go to state 102
+    local_declaration   go to state 83
+
+
+State 84
+
+   19 statements: statement • statements
+   20           | statement •
+
+    ID      shift, and go to state 99
+    LBRACE  shift, and go to state 71
+    IF      shift, and go to state 75
+    WHILE   shift, and go to state 76
+    RETURN  shift, and go to state 77
+    PRINT   shift, and go to state 78
+
+    $default  reduce using rule 20 (statements)
+
+    block                 go to state 80
+    statements            go to state 103
+    statement             go to state 84
+    assignment_statement  go to state 85
+    return_statement      go to state 86
+    if_statement          go to state 87
+    while_statement       go to state 88
+    print_statement       go to state 89
+
+
+State 85
+
+   25 statement: assignment_statement • SEMICOLON
+
+    SEMICOLON  shift, and go to state 104
+
+
+State 86
+
+   26 statement: return_statement • SEMICOLON
+
+    SEMICOLON  shift, and go to state 105
+
+
+State 87
+
+   27 statement: if_statement •
+
+    $default  reduce using rule 27 (statement)
+
+
+State 88
+
+   28 statement: while_statement •
+
+    $default  reduce using rule 28 (statement)
+
+
+State 89
+
+   29 statement: print_statement • SEMICOLON
+
+    SEMICOLON  shift, and go to state 106
+
+
+State 90
+
+   30 assignment_statement: ID ASSIGN • expr
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr             go to state 107
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 91
+
+   15 var_declaration: ID COLON • type
+   16                | ID COLON • type ASSIGN expr
+
+    INTEGER  shift, and go to state 11
+    BOOLEAN  shift, and go to state 12
+    VOID     shift, and go to state 13
+
+    type  go to state 15
+
+
+State 92
+
+   33 if_statement: IF LPAREN • expr RPAREN statement
+   34             | IF LPAREN • expr RPAREN statement ELSE statement
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr             go to state 108
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 93
+
+   35 while_statement: WHILE LPAREN • expr RPAREN statement
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    expr             go to state 109
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 94
+
+   31 return_statement: RETURN expr •
+
+    $default  reduce using rule 31 (return_statement)
+
+
+State 95
+
+   36 print_statement: PRINT print_arguments •
+
+    $default  reduce using rule 36 (print_statement)
+
+
+State 96
+
+   37 print_arguments: expr •
+   38                | expr • COMMA print_arguments
+
+    COMMA  shift, and go to state 110
+
+    $default  reduce using rule 37 (print_arguments)
+
+
+State 97
+
+   23 local_declaration: var_declaration SEMICOLON •
+
+    $default  reduce using rule 23 (local_declaration)
+
+
+State 98
+
+   17 block: LBRACE statements RBRACE •
+
+    $default  reduce using rule 17 (block)
+
+
+State 99
+
+   30 assignment_statement: ID • ASSIGN expr
+
+    ASSIGN  shift, and go to state 90
+
+
+State 100
+
+   18 block: LBRACE local_declarations statements • RBRACE
+
+    RBRACE  shift, and go to state 111
+
+
+State 101
+
+   15 var_declaration: ID • COLON type
+   16                | ID • COLON type ASSIGN expr
+
+    COLON  shift, and go to state 91
+
+
+State 102
+
+   21 local_declarations: local_declaration local_declarations •
+
+    $default  reduce using rule 21 (local_declarations)
+
+
+State 103
+
+   19 statements: statement statements •
+
+    $default  reduce using rule 19 (statements)
+
+
+State 104
+
+   25 statement: assignment_statement SEMICOLON •
+
+    $default  reduce using rule 25 (statement)
+
+
+State 105
+
+   26 statement: return_statement SEMICOLON •
+
+    $default  reduce using rule 26 (statement)
+
+
+State 106
+
+   29 statement: print_statement SEMICOLON •
+
+    $default  reduce using rule 29 (statement)
+
+
+State 107
+
+   30 assignment_statement: ID ASSIGN expr •
+
+    $default  reduce using rule 30 (assignment_statement)
+
+
+State 108
+
+   33 if_statement: IF LPAREN expr • RPAREN statement
+   34             | IF LPAREN expr • RPAREN statement ELSE statement
+
+    RPAREN  shift, and go to state 112
+
+
+State 109
+
+   35 while_statement: WHILE LPAREN expr • RPAREN statement
+
+    RPAREN  shift, and go to state 113
+
+
+State 110
+
+   38 print_arguments: expr COMMA • print_arguments
+
+    ID                   shift, and go to state 19
+    LPAREN               shift, and go to state 20
+    INTEGER_CONST        shift, and go to state 21
+    BOOLEAN_CONST_TRUE   shift, and go to state 22
+    BOOLEAN_CONST_FALSE  shift, and go to state 23
+
+    print_arguments  go to state 114
+    expr             go to state 96
+    expr_add         go to state 25
+    expr_mult        go to state 26
+    expr_divide      go to state 27
+    expr_minus       go to state 28
+    expr_relational  go to state 29
+    expr_primary     go to state 30
+    function_call    go to state 31
+
+
+State 111
+
+   18 block: LBRACE local_declarations statements RBRACE •
+
+    $default  reduce using rule 18 (block)
+
+
+State 112
+
+   33 if_statement: IF LPAREN expr RPAREN • statement
+   34             | IF LPAREN expr RPAREN • statement ELSE statement
+
+    ID      shift, and go to state 99
+    LBRACE  shift, and go to state 71
+    IF      shift, and go to state 75
+    WHILE   shift, and go to state 76
+    RETURN  shift, and go to state 77
+    PRINT   shift, and go to state 78
+
+    block                 go to state 80
+    statement             go to state 115
+    assignment_statement  go to state 85
+    return_statement      go to state 86
+    if_statement          go to state 87
+    while_statement       go to state 88
+    print_statement       go to state 89
+
+
+State 113
+
+   35 while_statement: WHILE LPAREN expr RPAREN • statement
+
+    ID      shift, and go to state 99
+    LBRACE  shift, and go to state 71
+    IF      shift, and go to state 75
+    WHILE   shift, and go to state 76
+    RETURN  shift, and go to state 77
+    PRINT   shift, and go to state 78
+
+    block                 go to state 80
+    statement             go to state 116
+    assignment_statement  go to state 85
+    return_statement      go to state 86
+    if_statement          go to state 87
+    while_statement       go to state 88
+    print_statement       go to state 89
+
+
+State 114
+
+   38 print_arguments: expr COMMA print_arguments •
+
+    $default  reduce using rule 38 (print_arguments)
+
+
+State 115
+
+   33 if_statement: IF LPAREN expr RPAREN statement •
+   34             | IF LPAREN expr RPAREN statement • ELSE statement
+
+    ELSE  shift, and go to state 117
+
+    ELSE      [reduce using rule 33 (if_statement)]
+    $default  reduce using rule 33 (if_statement)
+
+
+State 116
+
+   35 while_statement: WHILE LPAREN expr RPAREN statement •
+
+    $default  reduce using rule 35 (while_statement)
+
+
+State 117
+
+   34 if_statement: IF LPAREN expr RPAREN statement ELSE • statement
+
+    ID      shift, and go to state 99
+    LBRACE  shift, and go to state 71
+    IF      shift, and go to state 75
+    WHILE   shift, and go to state 76
+    RETURN  shift, and go to state 77
+    PRINT   shift, and go to state 78
+
+    block                 go to state 80
+    statement             go to state 118
+    assignment_statement  go to state 85
+    return_statement      go to state 86
+    if_statement          go to state 87
+    while_statement       go to state 88
+    print_statement       go to state 89
+
+
+State 118
+
+   34 if_statement: IF LPAREN expr RPAREN statement ELSE statement •
+
+    $default  reduce using rule 34 (if_statement)

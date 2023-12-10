@@ -1,0 +1,6 @@
+main: function void () = 
+{
+  a: integer;
+  b: integer = 999;
+}
+

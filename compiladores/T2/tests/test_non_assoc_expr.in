@@ -1,0 +1,16 @@
+main: function void () = {
+
+i: integer = 10;
+j: integer = 2;
+k: integer = 5;
+
+t: boolean;
+f: boolean;
+
+
+f = (i+j) > (i-j+k);
+
+print x;
+print y;
+
+}

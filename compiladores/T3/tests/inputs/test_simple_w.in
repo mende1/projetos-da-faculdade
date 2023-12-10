@@ -1,0 +1,9 @@
+// missing ;
+
+main: function void () = 
+{
+  a: integer
+  a = 4 + a;
+}
+
+// somou & atribuiu

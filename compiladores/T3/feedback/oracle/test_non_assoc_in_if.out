@@ -1,0 +1,21 @@
+[program 
+[func-declaration 
+[int]
+[main]
+[params
+]
+[block 
+[var-declaration [int][a]]
+[var-declaration [int][b]]
+[expression-stmt 
+[call 
+[read]
+[args [var [a]][var [b]]]
+]
+]
+[selection-stmt 
+[!= 
+[< [var [a]][var [b]]][true]]
+[return-stmt [var [a]]]]]
+]
+]

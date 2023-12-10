@@ -1,0 +1,2 @@
+
+foo: function boolean () = { return true; }

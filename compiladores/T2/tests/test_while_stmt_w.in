@@ -1,0 +1,13 @@
+main: function void ( ) = {
+   a:integer;
+   b:boolean = false;
+   c: integer = 1;
+   a = 0;
+   while a+5<10+1) {
+      c = a + c;
+      a = a + 1;
+   }
+   b = true;
+   
+   // imprimir c;
+}
